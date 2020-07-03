@@ -1,11 +1,11 @@
 .slider {
   position: relative;
-  ul {
+  &__list {
     padding-left: 0;
     list-style: none;
     margin: 0;
   }
-    img {
+  img {
     width: 100%;
   }
   &__next, &__prev {
@@ -16,9 +16,9 @@
     border-radius: 50%;
     border: 1px solid #fff ;
     &:hover {
-      background-color: @color-dark;
+      background-color: #000;
       cursor: pointer;
-      border-color: @color-dark;
+      border-color: #000;
     }
   }
   &__next {
@@ -27,14 +27,40 @@
   &__prev {
     left: 3.6rem;
   }
-  //&__icon-arrow {
-  //  color: #fff;
-  //}
-  &__arrow-left {
-    width: 0;
-    height: 0;
-    border-top: 2rem solid transparent;
-    border-right: 4rem solid #fff;
-    border-bottom: 2rem solid transparent;
+  &__arrow {
+    border: solid #fff;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 0.8rem;
+    &--left {
+      transform: rotate(135deg);
+      margin: 3px 0 0 6px;
+    }
+    &--right {
+      transform: rotate(-45deg);
+      margin: 3px 6px 0 0;
+    }
+  }
+  &__content {
+    position: absolute;
+    top: 39%;
+    left: 24%;
+    text-align: center;
+    h1,p {
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+    h1 {
+      font-size: 4.8rem;
+
+      padding: 1.1rem 4.2rem 1.1rem 4.7rem;
+      background-color: #000;
+      color: #fff;
+    }
+    p {
+      font-size: 1.8rem;
+      margin-top: 3.8rem;
+    }
   }
 }
