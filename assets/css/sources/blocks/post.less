@@ -1,25 +1,73 @@
 .post {
-  width: 36rem;
-  background: #fff;
+  width: 35.8rem;
+
+  &__item {
+    margin-bottom: 3.5rem;
+    background: #fff;
+    &--video {
+      line-height: 0;
+    }
+
+    &--bg-img-1 {
+      //position: relative;
+      //background: url("./../images/blog/blog-2.png") ;
+      //&::after {
+      //  content: "";
+      //  background: rgba(0,0,0,0.7);
+      //  position: absolute;
+      //  top: 0;
+      //  left: 0;
+      //  right: 0;
+      //  bottom: 0;
+      //}
+
+    }
+  }
+  &__img {
+    line-height: 0;
+  }
   &__inner {
     padding: 4rem 4.5rem;
-
+    //position: relative;
+    //z-index: 1;
   }
-  &__section {
+  &__category {
+    width: 11rem;
     font-size: 1.3rem;
     font-weight: 700;
     text-transform: uppercase;
     background: #000;
     color: #fff;
-    padding: 0.9rem 1.7rem;
+    padding: 0.6rem 0;
     display: inline-block;
+    margin-bottom: 2.2rem;
+    border-radius: 1px;
+    text-align: center;
   }
   &__title {
     font-size: 2rem;
     font-weight: 700;
-    padding: 3.3rem 0 2rem 0;
+    padding-bottom: 1.9rem;
   }
   &__author {
-    color: @color-light-gray;
+    color: #ccc;
+  }
+  p {
+    padding: 1rem 0;
+    line-height: 2;
+    color: @color-gray;
+    font-size: 1.3rem;
+  }
+  &__down-row {
+    display: flex;
+    justify-content: space-between;
+    color: #9a9a9a;
+  }
+  &__icons {
+    display: flex;
+    color: #ccc;
+  }
+  &__icon-like {
+    margin-left: 2rem;
   }
 }
