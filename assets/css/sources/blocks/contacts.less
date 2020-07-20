@@ -1,0 +1,49 @@
+.contacts {
+  &__container {
+    display: flex;
+    padding: 8rem 0;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+  }
+  &__info {
+    font-size: 1.5rem;
+    font-weight: 400;
+    &--bold {
+      font-weight: 700;
+      color: #000;
+    }
+  }
+  &__subtitle {
+    font-weight: 300;
+    padding: 2rem 0;
+  }
+  &__decor-line {
+    display: block;
+    width: 6rem;
+    border-bottom: 1px solid #000;
+  }
+  &__hours, &__address {
+    color: @color-gray;
+  }
+  &__phone, &__fax {
+    color: #555;
+    font-weight: 700;
+  }
+  &__address, &__phone, &__hours {
+    padding-top: 3rem;
+  }
+  &__form {
+    width: 78rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__btn {
+    //margin: 1.5rem;
+  }
+}
