@@ -1,10 +1,48 @@
 .skills {
+  &__item {
+    margin: 1.6rem 0;
+  }
   &__list {
     margin-top: 4.3rem;
   }
   &__item-graph {
-    padding: 0.5rem;
-    background: @color-light-gray;
+    position: relative;
+    width: 5rem;
+    bottom: 0.8rem;
+    &--photoshop {
+      left: 59%;
+    }
+    &--brand {
+      left: 95%;
+    }
+    &--photo {
+      left: 50%;
+    }
+    &--web {
+      left: 80%;
+    }
+  }
+  &__line-box {
+    height: 1rem;
+    background: #ebebeb;
+    padding: 0.4rem 0 0.4rem 0.4rem;
+  }
+  &__line {
+    background: #a1a1a1;
+    height: 0.2rem;
+    width: 100%;
+    &--photoshop {
+      width: 59%;
+    }
+    &--brand {
+      width: 95%;
+    }
+    &--photo {
+      width: 50%;
+    }
+    &--web {
+      width: 80%;
+    }
   }
   &__icon-circle {
     display: inline-block;

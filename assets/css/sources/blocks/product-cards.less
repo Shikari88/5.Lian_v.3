@@ -8,19 +8,57 @@
     border-top: 1px solid @color-light-gray;
     border-bottom: 1px solid @color-light-gray;
     margin: 0;
-
   }
   &__list {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-content: space-between;
     line-height: 0;
-    height: 133.2rem;
+    max-height: 133.2rem;
+    &--column {
+      flex-direction: column;
+    }
+    &--hide {
+      display: none;
+    }
   }
+  &__inner {
+    display: none;
+  }
+  &__inner.active{
+    display: block;
+  }
+
+
+
   &__item {
     margin-bottom: 3.3rem;
+    width: 36rem;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    a {
+      display: block;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+      }
+
+      &:hover:after {
+        opacity: 1;
+      }
+    }
   }
+
   &__btn {
     text-align: center;
     padding-bottom: 7rem;
