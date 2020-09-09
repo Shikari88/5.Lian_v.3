@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/common.js"></script>
 </head>
 <body>
     <header class="header">
@@ -27,9 +28,21 @@
                         <li class="nav__item"><a href="contacts.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="header__search">
+
+
+
+                <div class="header__search-form hidden">
+                    <form action="" method="get">
+                        <label class="hidden" for="search"></label>
+                        <input class="btn" name="search" autofocus placeholder="Search..." type="search" >
+                        <!--<button class="btn btn--search"  type="submit"><i class="fa fa-search"></i></button>-->
+                    </form>
+                </div>
+                <div class="header__search" >
                     <a href="#"><i class="fa fa-search"></i></a>
                 </div>
+
+
             </div>
         </div>
     </header>
@@ -153,8 +166,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="blog-content__list--hide list--hide">
+                    There will be project :)
+                </div>
                 <div class="blog-content__btn">
-                    <button class=" btn btn--gray">load more</button>
+                    <button class=" btn btn--gray btn--more">load more</button>
                 </div>
             </div>
             <aside class="blog-content__sidebar sidebar">
@@ -168,16 +184,19 @@
                 <div class="sidebar__recent recent-posts">
                     <h2 class="recent-posts__title sidebar__title">recent posts</h2>
                     <div class="recent-posts__list">
-                        <div class="recent-post recent-posts__item">
-                            <div class="recent-post__img">
-                                <img src="./assets/images/recent-posts/recent-img-1.png" alt="Тюбики кремов">
+                        <a href="#">
+                            <div class="recent-post recent-posts__item">
+                                <div class="recent-post__img">
+                                    <img src="./assets/images/recent-posts/recent-img-1.png" alt="Тюбики кремов">
+                                </div>
+                                <div class="recent-post__info">
+                                    <div class="recent-post__title">Lorem ipsum dolor sit amet, consec</div>
+                                    <div class="recent-post__date">July 5, 2016</div>
+                                </div>
                             </div>
-                            <div class="recent-post__info">
-                                <div class="recent-post__title">Lorem ipsum dolor sit amet, consec</div>
-                                <div class="recent-post__date">July 5, 2016</div>
-                            </div>
-                        </div>
-                        <div class="recent-post recent-posts__item">
+                        </a>
+                        <a href="#">
+                            <div class="recent-post recent-posts__item">
                             <div class="recent-post__img">
                                 <img src="./assets/images/recent-posts/recent-img-2.png" alt="Тюбики кремов">
                             </div>
@@ -187,7 +206,9 @@
                                 <div class="recent-post__date">July 17, 2016</div>
                             </div>
                         </div>
-                        <div class="recent-post recent-posts__item">
+                        </a>
+                        <a href="#">
+                            <div class="recent-post recent-posts__item">
                             <div class="recent-post__img">
                                 <img src="./assets/images/recent-posts/recent-img-3.png" alt="Тюбики кремов">
                             </div>
@@ -196,7 +217,9 @@
                                 <div class="recent-post__date">July 21, 2016</div>
                             </div>
                         </div>
-                        <div class="recent-post recent-posts__item">
+                        </a>
+                        <a href="#">
+                            <div class="recent-post recent-posts__item">
                             <div class="recent-post__img">
                                 <img src="./assets/images/recent-posts/recent-img-4.png" alt="Тюбики кремов">
                             </div>
@@ -205,6 +228,7 @@
                                 <div class="recent-post__date">July 28, 2016</div>
                             </div>
                         </div>
+                        </a>
                     </div>
                 </div>
                 <div class="sidebar__popular-tags popular-tags">

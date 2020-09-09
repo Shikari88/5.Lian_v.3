@@ -10,13 +10,21 @@
   }
   &__list {
     //width: 75rem;
-    height: 148rem;
+    max-height: 148rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-between;
+    &--hide {
+      display: none;
+      text-align: center;
+      font-size: 2.5rem;
+      padding: 3rem;
+      margin: 2rem;
+      color: @color-gray;
+    }
   }
   &__btn {
-    text-align:center;
+    text-align: center;
   }
 }

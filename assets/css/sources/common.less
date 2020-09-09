@@ -28,9 +28,14 @@ h1,h2,h3 {
 .active {
   display: block;
 }
-//.product-cards__list {
-//  display: none;
-//}
-//.product-cards__list .isActive {
-//  display: block;
-//}
+@media screen and (max-width: 1024px){
+  .container {
+    //84.5%
+    max-width: 86.5rem ;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 65rem;
+  }
+}

@@ -1,8 +1,5 @@
 .header {
   &__container {
-    //display: flex;
-    //justify-content: space-between;
-    //align-items: center;
     .display-flex();
   }
   &__decor-line {
@@ -39,14 +36,23 @@
       font-style: italic;
       letter-spacing: 0.3px;
     }
-    //button {
-    //  position: absolute;
-    //  top: 0;
-    //  right: 0;
-    //  color: #fff;
-    //  height: 2rem;
-    //  width: 2rem;
-    //  font-size: 1.4rem;
-    //}
   }
+}
+@media screen and(max-width: 1024px) {
+  .header{
+    &__search {
+      margin: 0 1.5rem;
+    }
+  }
+}
+@media screen and(max-width: 768px) {
+  .header {
+    &__container {
+      flex-direction: column;
+    }
+    &__logo {
+      padding-top: 3rem;
+    }
+  }
+
 }

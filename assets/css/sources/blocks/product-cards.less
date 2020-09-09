@@ -17,17 +17,22 @@
     line-height: 0;
     max-height: 133.2rem;
     &--column {
-      flex-direction: column;
+      flex-direction: column
     }
     &--hide {
       display: none;
+      text-align: center;
+      font-size: 2.5rem;
+      padding: 3rem;
+      margin: 2rem;
+      color: @color-gray;
     }
   }
   &__inner {
-    display: none;
+    display: none
   }
   &__inner.active{
-    display: block;
+    display: block
   }
 
 
@@ -62,5 +67,28 @@
   &__btn {
     text-align: center;
     padding-bottom: 7rem;
+  }
+}
+@media screen and (max-width:1024px) {
+  .product-cards__list {
+    max-height: 101.5rem;
+  }
+  .product-cards__item {
+    width: 26rem;
+  }
+}
+@media screen and (max-width:768px) {
+  .product-cards {
+    &__list {
+      align-content: space-around;
+      max-height: 106.5rem;
+      padding: 0 3rem;
+    }
+    &--hidden {
+      display: none;
+    }
+    &__nav-item {
+      font-size: 1.3rem;
+    }
   }
 }
