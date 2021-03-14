@@ -69,6 +69,9 @@
     padding-bottom: 7rem;
   }
 }
+@media screen and (max-width: 1400px) {
+ // max-height: 133.2rem;
+}
 @media screen and (max-width:1024px) {
   .product-cards__list {
     max-height: 101.5rem;
@@ -79,16 +82,26 @@
 }
 @media screen and (max-width:768px) {
   .product-cards {
+    &__item {
+      &--hidden {
+        display: none;
+      }
+    }
     &__list {
       align-content: space-around;
       max-height: 106.5rem;
       padding: 0 3rem;
     }
-    &--hidden {
-      display: none;
-    }
+
     &__nav-item {
       font-size: 1.3rem;
     }
   }
 }
+//@media screen and (max-width:425px) {
+//  .product-cards {
+//    &__list {
+//      max-height: 108.5rem;
+//    }
+//  }
+//}

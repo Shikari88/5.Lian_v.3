@@ -31,4 +31,36 @@
       color: @color-gray;
     }
   }
+  &__skills--1024 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px){
+  .about-main {
+    &__container {
+      flex-wrap: wrap;
+    }
+    &__img {
+      width: 35rem;
+    }
+    &__info {
+      width: 46rem;
+    }
+    &__skills {
+      display: none;
+      &--1024 {
+        display: block;
+        width: 100%;
+        margin-top: 5rem;
+      }
+    }
+    &__story, &__skills--1024 {
+      h2 {
+        font-size: 3rem;
+      }
+    }
+    &__skills--1024 {
+      text-align: center;
+    }
+  }
 }

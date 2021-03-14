@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./assets/js/slider1.js"></script>
     <script src="./assets/js/common.js"></script>
-
+    <script src="./assets/js/menuBurger.js"></script>
 </head>
 <body>
     <header class="header">
@@ -19,10 +19,16 @@
                 <svg width="43" height="35">
                     <polygon points="4,32 21.5,4 39,32" fill="none" stroke="#4a4a4a" stroke-width="5"></polygon>
                 </svg>
-            </span>N</a></div>
+                </span>N</a>
+            </div>
+            <div class="header__menuBurger menuBurger hidden">
+                <i class="fa fa-bars"></i>
+            </div>
             <div class="header__nav">
+
                 <div class="header__decor-line"></div>
                 <div class="nav">
+
                     <ul>
                         <li class="nav__item"><a href="index.html">Home</a></li>
                         <li class="nav__item"><a href="about.html">About</a></li>
@@ -45,21 +51,21 @@
     </header>
     <div class="slider" id="slider">
         <ul class="slider__list">
-            <li class="slider__item"><img src="./assets/images/slider/slider2.png" alt="Фото-презентация">
+            <li class="slider__item"><img src="./assets/images/slider/slider2.png" alt="Слайдер_1">
                 <div class="slider__content title-page">
                     <h2 >Design & Branding</h2>
                     <p>We Deliver Quality Results</p>
                 </div>
             </li>
-            <li class="slider__item"><img src="./assets/images/slider/slider1.png" alt="Фото-презентация">
+            <li class="slider__item"><img src="./assets/images/slider/slider1.png" alt="Слайдер_2">
                 <div class="slider__content title-page">
                     <h1>Lian Creative Agency</h1>
                     <p>Minimal Freelance Portfolio</p>
                 </div>
             </li>
-            <li class="slider__item"><img src="./assets/images/slider/slider2.png" alt="Фото-презентация">
+            <li class="slider__item"><img src="./assets/images/slider/slider3.png" alt="Слайдер_3">
                 <div class="slider__content title-page">
-                    <h2>Post hardcore</h2>
+                    <h2>PR & SEO</h2>
                     <p>We doing too</p>
                 </div>
             </li>
@@ -111,14 +117,12 @@
                     <div class="product-cards__item product-cards__mobile"><a href=""><img src="./assets/images/product-card/pr-card5.png" alt="Светильники"></a></div>
                     <div class="product-cards__item product-cards__ux"><a href=""><img src="./assets/images/product-card/pr-card6.png" alt="Вилка и ложка"></a></div>
                     <div class="product-cards__item product-cards__design"><a href=""><img src="./assets/images/product-card/pr-card3.png" alt="Стол и стулья"></a></div>
-                    <div class="product-cards__item product-cards__mobile"><a href=""><img src="./assets/images/product-card/pr-card2_1.png" alt="Часы"></a></div>
-                    <div class="product-cards__item product-cards__design"><a href=""><img src="./assets/images/product-card/pr-card8.png" alt="2 стула"></a></div>
-                    <div class="product-cards--hidden">
-                        <div class="product-cards__item product-cards__wordpress"><a href=""><img src="./assets/images/product-card/pr-card10.png" alt="Часы настенные"></a></div>
-                        <div class="product-cards__item product-cards__design"><a href=""><img src="./assets/images/product-card/pr-card4.png" alt="4 кофейных столика"></a></div>
-                        <div class="product-cards__item product-cards__branding"><a href=""><img src="./assets/images/product-card/pr-card7.png" alt="Визитка"></a></div>
-                        <div class="product-cards__item product-cards__logo"><a href=""><img src="./assets/images/product-card/pr-card9.png" alt="Упаковки"></a></div>
-                    </div>
+                    <div class="product-cards__item hidden-425px product-cards__mobile"><a href=""><img src="./assets/images/product-card/pr-card2_1.png" alt="Часы"></a></div>
+                    <div class="product-cards__item hidden-425px product-cards__design"><a href=""><img src="./assets/images/product-card/pr-card8.png" alt="2 стула"></a></div>
+                    <div class="product-cards__item  hidden-768px product-cards__wordpress"><a href=""><img src="./assets/images/product-card/pr-card10.png" alt="Часы настенные"></a></div>
+                    <div class="product-cards__item  hidden-768px product-cards__design"><a href=""><img src="./assets/images/product-card/pr-card4.png" alt="4 кофейных столика"></a></div>
+                    <div class="product-cards__item  hidden-768px product-cards__branding"><a href=""><img src="./assets/images/product-card/pr-card7.png" alt="Визитка"></a></div>
+                    <div class="product-cards__item  hidden-768px product-cards__logo"><a href=""><img src="./assets/images/product-card/pr-card9.png" alt="Упаковки"></a></div>
                 </div>
             </div>
             <div class="product-cards__inner" id="logo">

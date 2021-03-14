@@ -19,6 +19,7 @@ h1,h2,h3 {
 .hidden {
   display: none;
 }
+
 .hidden-list {
   display: none;
 }
@@ -37,5 +38,16 @@ h1,h2,h3 {
 @media screen and (max-width: 768px) {
   .container {
     max-width: 65rem;
+  }
+  .hidden-768px {
+    display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .container {
+    max-width: 32.8rem;
+  }
+  .hidden-425px {
+    display: none;
   }
 }

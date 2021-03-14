@@ -55,6 +55,7 @@
     left: 0.5rem;
   }
   &__figure-rectangle {
+    padding-top: 0.2rem;
     width: 4rem;
     height: 2.1rem;
     background: #000;
@@ -74,5 +75,23 @@
     position: absolute;
     top: 1rem;
     left: 0;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .skills {
+    &__icon-circle {
+      right: 2rem;
+    }
+    &__item-graph {
+      &--photo {
+        left: 56%;
+      }
+    }
+    &__line {
+      &--photo {
+        width: 56%;
+      }
+    }
   }
 }
