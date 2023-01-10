@@ -23,6 +23,4 @@ $(function () {
     $('.btn--more').click(function (){
         $('.list--hide').slideToggle();
     });
-
-
 });

@@ -1,7 +1,7 @@
 .slider {
   position: relative;
-  //width: 136.5rem;
-  width: 134.9rem;
+  //width: 134.9rem;
+  width: 100%;
   overflow: hidden; //скрываем все, выходящее за рамки ширины элемента
   &__list {
     padding-left: 0;
@@ -83,10 +83,10 @@
     }
   }
 }
-@media screen and (min-width: 425px) {
-  .slider {
-    display: none;
-  }
+@media screen and (max-width: 769px) {
+  //.slider {
+  //  display: none;
+  //}
 }
 
 //@media screen and (max-width: 1024px) {

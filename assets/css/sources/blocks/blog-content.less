@@ -28,3 +28,33 @@
     text-align: center;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .blog-content {
+    &__list {
+      max-height: none;
+      min-height: 148rem;
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .blog-content {
+    &__container {
+      flex-direction: column;
+      padding: 7rem 0;
+    }
+    &__wrap {
+      width: 65rem;
+    }
+    &__list {
+      flex-wrap: nowrap;
+      max-height: none;
+      align-items: center;
+    }
+    &__sidebar {
+      margin: 4rem auto;
+    }
+  }
+}
