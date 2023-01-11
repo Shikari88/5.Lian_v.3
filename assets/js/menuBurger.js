@@ -51,3 +51,14 @@ if(isMobile.any()){
 } else {
     document.body.classList.add("_pc");
 }
+
+const iconNav = document.querySelector(".header__icon");
+const menuNav = document.querySelector(".header__nav");
+
+if(iconNav) {
+    iconNav.addEventListener('click', function () {
+        document.body.classList.toggle("_lock");
+        iconNav.classList.toggle("_active");
+        menuNav.classList.toggle("_active");
+    });
+}

@@ -65,33 +65,51 @@
 @media screen and (max-width: 767px) {
   .header {
     //position: fixed;
-    //z-index: 10;
-    //background: aliceblue;
+    //z-index: 5;
     //width: 100%;
+    //height: 100%;
+    //background: #dbcdcd;
     //opacity: 0.97;
     &__container {
       display: flex;
       flex-direction: row;
+      align-items: flex-start;
     }
 
     &__nav {
-      display: none;
-      position: relative;
-
+      //display: none;
+      right: 0;
+      position: fixed;
       flex-direction: column;
+      z-index: 1;
+      top: 6rem;
+      background: #413f3f;
+      opacity: 0.9;
+      width: 100%;
+      height: 100%;
+      left: -100%;
+      //transform: translate(-100%, 0px);
+      transition: left 0.3s ease 0s;
+      &._active {
+        left:0 ;
+      }
     }
     &__decor-line, &__search {
       display: none;
     }
-
+    &__wrap-mobmenu {
+      display: flex;
+    }
     //кнопка меню гамбургера
     &__icon {
+      //прописываем стили для иконки в виде трех полос
       display: block;
       z-index: 5;
       position: relative;
       width: 3rem;
       height: 1.8rem;
       cursor: pointer;
+      top: 2.2rem;
       &::before, &::after, & span {
         left: 0;
         position: absolute;
@@ -100,19 +118,24 @@
         transition: all 0.3s ease 0s;
         background-color: #000;
       }
+      //для обращения к псевдоэлементам в целом
       &::before, &::after  {
         content: '';
       }
+      //верхняя линия
       &::before {
         top: 0;
       }
+      //нижняя
       &::after {
         bottom: 0;
       }
+      //средняя
       span {
         top: 50%;
         transform: scale(1) translate(0px, -50%);
       }
+
       &._active span{
         transform: scale(0) translate(0px, -50%);
       }
