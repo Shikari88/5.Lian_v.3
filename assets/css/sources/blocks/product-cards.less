@@ -98,10 +98,22 @@
     }
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 425px) {
   .product-cards {
-    &__nav {
-      //display: none;
+    &__list {
+      max-height: 100%;
+      justify-content: center;
+      &--hide {
+        font-size: 1.9rem;
+      }
+    }
+    &__nav-list {
+        display: flex;
+        padding-left: 0;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 25rem;
+        justify-content: flex-end;
     }
   }
 }
