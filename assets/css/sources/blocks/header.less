@@ -57,9 +57,7 @@
     //  flex-direction: column;
     //  align-items: flex-start;
     //}
-    &__decor-line {
-      display: none;
-    }
+
   }
 }
 @media screen and (max-width: 767px) {
@@ -74,6 +72,7 @@
       display: flex;
       flex-direction: row;
       align-items: flex-start;
+      margin: 1rem auto;
     }
 
     &__nav {
@@ -82,7 +81,7 @@
       position: fixed;
       flex-direction: column;
       z-index: 1;
-      top: 6rem;
+      top: 8rem;
       background: #413f3f;
       opacity: 0.9;
       width: 100%;
@@ -146,6 +145,9 @@
       &._active::after {
         bottom: 50%;
         transform: rotate(45deg) translate(0px, 50%);
+      }
+      &__decor-line {
+        display: none;
       }
     }
   }
