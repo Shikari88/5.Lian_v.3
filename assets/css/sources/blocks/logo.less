@@ -10,9 +10,30 @@
   }
   img {
     width: 126%;
+    height: 100%;
   }
   &__sign-decor {
     margin: 0 -1.1rem 0 -2rem;
     width: 100%;
+  }
+  &--png {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 391px){
+  .logo--png {
+    display: none;
+  }
+}
+@media screen and (max-width: 390px){
+  .logo {
+    &--svg {
+      display: none;
+    }
+    &--png {
+      display: block;
+    }
   }
 }
