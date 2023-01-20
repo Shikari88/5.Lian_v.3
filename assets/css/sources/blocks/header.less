@@ -2,6 +2,9 @@
   &__container {
     .display-flex();
   }
+  &__logo {
+    padding-top: 0.7rem;
+  }
   &__decor-line {
     width: 2rem;
     border-bottom: 2px solid #777;
@@ -48,10 +51,11 @@
 @media screen and(max-width: 768px) {
   .header {
     &__container {
-      //flex-direction: column;
+      flex-direction: column;
     }
     &__logo {
-      //padding-top: 3rem;
+      padding-top: 4rem;
+      margin-right: 10rem;
     }
     //&__nav {
     //  flex-direction: column;
@@ -72,16 +76,18 @@
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      margin: 1rem auto;
+      padding: 1rem 0;
     }
-
+    &__logo {
+      padding-top: 0.8rem;
+    }
     &__nav {
       //display: none;
       right: 0;
       position: fixed;
       flex-direction: column;
       z-index: 1;
-      top: 8rem;
+      top: 7.7rem;
       background: #413f3f;
       opacity: 0.9;
       width: 100%;
@@ -149,6 +155,47 @@
       &__decor-line {
         display: none;
       }
+    }
+  }
+}
+@media screen and(max-width: 425px) {
+  .header {
+    &__icon {
+      height: 2.2rem;
+      top: 1.9rem;
+    }
+  }
+}
+@media screen and(max-width: 390px) {
+  .header {
+    &__icon {
+      height: 1.8rem;
+    }
+    &__nav {
+      top: 7.2rem;
+    }
+  }
+}
+@media screen and(max-width: 375px) {
+  .header {
+    &__nav {
+      top: 7.6rem;
+    }
+    &__icon {
+      height: 2.2rem;
+
+    }
+  }
+}
+@media screen and(max-width: 320px) {
+  .header {
+    &__icon {
+      width: 2.6rem;
+      height: 1.7rem;
+      top: 1.7rem;
+    }
+    &__nav {
+      top: 6.8rem;
     }
   }
 }
