@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booksy</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/screen.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="assets/js/form.js"></script>
+    <!--<script src="assets/js/list.js"></script>-->
+</head>
+<body>
+    <!--<div class="popup-success" id="popupSuccess">-->
+        <!--<p>Поздравляем с успешной регистрацией :)</p>-->
+    <!--</div>-->
+    <div class="registration">
+        <div class="container registration__container">
+            <header class="registration__header header">
+                <div class="header__logo">
+                    <img src="assets/images/logo.png" alt="Логотип">
+                </div>
+                <div class="header__desc">WELCOME-АНКЕТА КНИЖНОГО БЛОГЕРА ДЛЯ РЕГИСТРАЦИИ В СЕРВИСЕ
+                    <span class="header__desc--bold">BOOKSY 👋</span>
+                </div>
+            </header>
+            <main class="main registration__main">
+                <form class="registration__form form">
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend"></legend>
+                        <div class="form__group">
+                            <label for="email" class="form__label"></label>
+                            <input type="text" class="form__control" id="email" placeholder="Введите ваш email">
+                            <div class="form__icon">
+                                <img src="assets/images/Help.svg" alt="подсказка">
+                            </div>
+                            <div class="form__help">
+                                Почта требуется только для доступа к ЛК и привязке всех указанных параметров
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <label for="password" class="form__label"></label>
+                            <input type="text" class="form__control" id="password" placeholder="Придумайте пароль">
+                            <div class="form__icon">
+                                <img src="assets/images/Help.svg" alt="подсказка">
+                            </div>
+                            <div class="form__help">
+                                Пароль требуется для доступа к ЛК . При запуске сайта вы сможете войти в ЛК по почте и паролю.
+                                Пароль должен состоять из 6 цифр.
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <label for="tg" class="form__label"></label>
+                            <input type="text" class="form__control" id="tg" placeholder="Напишите ваш никнейм в Telegram">
+                            <div class="form__icon">
+                                <img src="assets/images/Help.svg" alt="подсказка">
+                            </div>
+                            <div class="form__help">
+                                Он необходим, чтобы подключить вас к боту и добавить в каталог.
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <label for="name" class="form__label"></label>
+                            <input type="text" class="form__control" id="name" placeholder="Напишите ваше имя">
+                            <div class="form__icon opacity-0">
+                                <img src="assets/images/Help.svg" alt="подсказка">
+                            </div>
+                            <div class="form__help opacity-0">
+                                Нам надо знать как вас зовут
+                            </div>
+                        </div>
+                        <!-- Жанры, которые хотите оценить-->
+                        <div class="form__group">
+                            <div class="form__icon-ScrollDown">
+                                <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                            </div>
+
+                            <!--<label for="status" class="form__label"></label>-->
+                            <!--<input type="text" class="form__control" id="status" placeholder="Статус книги, которую возьмете на обзор">-->
+                            <span class="form__text">Выберете все жанры, которые предпочитаете читать</span>
+
+                            <div class="form__icon">
+                                <img src="assets/images/Help.svg" alt="подсказка">
+                            </div>
+                            <div class="form__help">
+                                По жанрам писатели будут осуществлять поиск блогеров/рецензентов для своих книг
+                            </div>
+                        </div>
+                        <ul class="nested-list">
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="allGenre">
+                                    <label for="allGenre" class="checkbox__label checkbox__label--bold">Все жанры</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item checkbox__item--main" id="fantasy">
+                                    <label for="fantasy" class="checkbox__label " >Фэнтези</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item checkbox__item--subsidiary" id="fantasy_1">
+                                        <label for="fantasy_1" class="checkbox__label ">Любовное</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item checkbox__item--subsidiary" id="fantasy_2">
+                                        <label for="fantasy_2" class="checkbox__label ">Темное</label>
+                                    </li>
+
+
+
+
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantasy_3">
+                                        <label for="fantasy_3" class="checkbox__label">Юмористическое</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantasy_4">
+                                        <label for="fantasy_4" class="checkbox__label">Приключенческое</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantasy_5">
+                                        <label for="fantasy_5" class="checkbox__label">Городское</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantasy_6">
+                                        <label for="fantasy_6" class="checkbox__label">Историческое</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantasy_7">
+                                        <label for="fantasy_7" class="checkbox__label">Боевое</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantasy_8">
+                                        <label for="fantasy_8" class="checkbox__label">Славянское</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantasy_9">
+                                        <label for="fantasy_9" class="checkbox__label">Бытовое</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantasy_10">
+                                        <label for="fantasy_10" class="checkbox__label">Деревенское</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantasy_11">
+                                        <label for="fantasy_11" class="checkbox__label">Героическое</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantasy_12">
+                                        <label for="fantasy_12" class="checkbox__label">Магические академии</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantasy_13">
+                                        <label for="fantasy_13" class="checkbox__label">Эпическое</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item checkbox__item--main" id="fantastic">
+                                    <label for="fantastic" class="checkbox__label">Фантастика</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item checkbox__item--subsidiary" id="fantastic_1">
+                                        <label for="fantastic_1" class="checkbox__label">Космическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item checkbox__item--subsidiary" id="fantastic_2">
+                                        <label for="fantastic_2" class="checkbox__label">ЛитРПГ</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_3">
+                                        <label for="fantastic_3" class="checkbox__label">Боевая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_4">
+                                        <label for="fantastic_4" class="checkbox__label">Любовная</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_5">
+                                        <label for="fantastic_5" class="checkbox__label">Постапокалипсис</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_6">
+                                        <label for="fantastic_6" class="checkbox__label">Научная</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_7">
+                                        <label for="fantastic_7" class="checkbox__label">Приключенческая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_8">
+                                        <label for="fantastic_8" class="checkbox__label">Альтернативная</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_9">
+                                        <label for="fantastic_9" class="checkbox__label">Социальная</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_10">
+                                        <label for="fantastic_10" class="checkbox__label">Юмористическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_11">
+                                        <label for="fantastic_11" class="checkbox__label">РеалРПГ</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_12">
+                                        <label for="fantastic_12" class="checkbox__label">Киберпанк</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_13">
+                                        <label for="fantastic_13" class="checkbox__label">Историческая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_14">
+                                        <label for="fantastic_14" class="checkbox__label">Детективная</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_15">
+                                        <label for="fantastic_15" class="checkbox__label">Космоопера</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_16">
+                                        <label for="fantastic_16" class="checkbox__label">Фантастический триллер</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_17">
+                                        <label for="fantastic_17" class="checkbox__label">Бояръ-аниме</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_18">
+                                        <label for="fantastic_18" class="checkbox__label">Стимпанк</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_19">
+                                        <label for="fantastic_19" class="checkbox__label">Романтическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_20">
+                                        <label for="fantastic_20" class="checkbox__label">Утопии</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="fantastic_21">
+                                        <label for="fantastic_21" class="checkbox__label">Антиутопии</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="novel">
+                                    <label for="novel" class="checkbox__label">Любовный роман</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="novel_1">
+                                        <label for="novel_1" class="checkbox__label">Современный</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="novel_2">
+                                        <label for="novel_2" class="checkbox__label">Остросюжетный</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="novel_3">
+                                        <label for="novel_3" class="checkbox__label">Романтическая комедия</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="novel_4">
+                                        <label for="novel_4" class="checkbox__label">Исторический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="novel_5">
+                                        <label for="novel_5" class="checkbox__label">Детективный</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="novel_6">
+                                        <label for="novel_6" class="checkbox__label">Короткий</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="novel_7">
+                                        <label for="novel_7" class="checkbox__label">Служебный</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="novel_8">
+                                        <label for="novel_8" class="checkbox__label">Женский</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="novel_9">
+                                        <label for="novel_9" class="checkbox__label">Семейная сага</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="novel_10">
+                                        <label for="novel_10" class="checkbox__label">Готический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="novel_11">
+                                        <label for="novel_11" class="checkbox__label">Приключенческий</label>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="prose">
+                                    <label for="prose" class="checkbox__label">Современная проза</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="prose_1">
+                                        <label for="prose_1" class="checkbox__label">Подростковая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="prose_2">
+                                        <label for="prose_2" class="checkbox__label">Молодежная</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="erotica">
+                                    <label for="erotica" class="checkbox__label">Эротика</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="erotica_1">
+                                        <label for="erotica_1" class="checkbox__label">Эротическая фантастика</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="erotica_2">
+                                        <label for="erotica_2" class="checkbox__label">Жесткая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="erotica_3">
+                                        <label for="erotica_3" class="checkbox__label">Романтическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="erotica_4">
+                                        <label for="erotica_4" class="checkbox__label">Эротическое фентези</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="erotica_5">
+                                        <label for="erotica_5" class="checkbox__label">Эротический триллер</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="erotica_6">
+                                        <label for="erotica_6" class="checkbox__label">БДСМ</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="erotica_7">
+                                        <label for="erotica_7" class="checkbox__label">Эротическая драма</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="erotica_8">
+                                        <label for="erotica_8" class="checkbox__label">Эротический фанфик</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="mystic">
+                                    <label for="mystic" class="checkbox__label">Мистика</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="mystic_1">
+                                        <label for="mystic_1" class="checkbox__label">Мистический триллер</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="mystic_2">
+                                        <label for="mystic_2" class="checkbox__label">Романтическая мистика</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="mystic_3">
+                                        <label for="mystic_3" class="checkbox__label">Мистический детектив</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="hitmen">
+                                    <label for="hitmen" class="checkbox__label">Попаданцы</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="hitmen_1">
+                                        <label for="hitmen_1" class="checkbox__label">Попаданцы в другие миры</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="hitmen_2">
+                                        <label for="hitmen_2" class="checkbox__label">Попаданцы во времени</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="hitmen_3">
+                                        <label for="hitmen_3" class="checkbox__label">Попаданцы в тела</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="slash">
+                                    <label for="slash" class="checkbox__label">Слэш</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="famSlash">
+                                    <label for="famSlash" class="checkbox__label">Фемлэш</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="drama">
+                                    <label for="drama" class="checkbox__label">Драма</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="drama_1">
+                                        <label for="drama_1" class="checkbox__label">Мелодрама</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="drama_2">
+                                        <label for="drama_2" class="checkbox__label">Трагедия</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="drama_3">
+                                        <label for="drama_3" class="checkbox__label">Психологическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="drama_4">
+                                        <label for="drama_4" class="checkbox__label">Политическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="drama_5">
+                                        <label for="drama_5" class="checkbox__label">Историческая</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="detective">
+                                    <label for="detective" class="checkbox__label">Детективы</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="detective_1">
+                                        <label for="detective_1" class="checkbox__label">Исторический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="detective_2">
+                                        <label for="detective_2" class="checkbox__label">Остросюжетный</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="detective_3">
+                                        <label for="detective_3" class="checkbox__label">Современный</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="detective_4">
+                                        <label for="detective_4" class="checkbox__label">Детективный триллер</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="detective_5">
+                                        <label for="detective_5" class="checkbox__label">Психологический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="detective_6">
+                                        <label for="detective_6" class="checkbox__label">Иронический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="detective_7">
+                                        <label for="detective_7" class="checkbox__label">Шпионский</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="detective_8">
+                                        <label for="detective_8" class="checkbox__label">Женский</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="detective_9">
+                                        <label for="detective_9" class="checkbox__label">Приключенческий</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="detective_10">
+                                        <label for="detective_10" class="checkbox__label">Политический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="detective_11">
+                                        <label for="detective_11" class="checkbox__label">Политическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="detective_12">
+                                        <label for="detective_12" class="checkbox__label">Романтический</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="adult">
+                                    <label for="adult" class="checkbox__label">Young Adult</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="adult_1">
+                                        <label for="adult_1" class="checkbox__label">New Adult</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="horror">
+                                    <label for="horror" class="checkbox__label">Ужасы</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="humor">
+                                    <label for="humor" class="checkbox__label">Юмор</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="adventures">
+                                    <label for="adventures" class="checkbox__label">Приключения</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="poetry">
+                                    <label for="poetry" class="checkbox__label">Поэзия</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="poetry_1">
+                                        <label for="poetry_1" class="checkbox__label">Стихотворения о любви</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="poetry_2">
+                                        <label for="poetry_2" class="checkbox__label">Стихотворения для детей</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="poetry_3">
+                                        <label for="poetry_3" class="checkbox__label">Поэмы</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="children">
+                                    <label for="children" class="checkbox__label">Детская литература</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="fairyTales">
+                                    <label for="fairyTales" class="checkbox__label">Сказки</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="thriller">
+                                    <label for="thriller" class="checkbox__label">Триллеры</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="thriller_1">
+                                        <label for="thriller_1" class="checkbox__label">Психологический триллер</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="fanfic">
+                                    <label for="fanfic" class="checkbox__label">Фанфики</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="psychology">
+                                    <label for="psychology" class="checkbox__label">Психология</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="history">
+                                    <label for="history" class="checkbox__label">Историческая литература</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="nonFiction">
+                                    <label for="nonFiction" class="checkbox__label">Non-fiction</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="action">
+                                    <label for="action" class="checkbox__label">Боевики</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="biography">
+                                    <label for="biography" class="checkbox__label">Биографии и мемуары</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="religion">
+                                    <label for="religion" class="checkbox__label">Религия</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="militaryProse">
+                                    <label for="militaryProse" class="checkbox__label">Военная проза</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="comics">
+                                    <label for="comics" class="checkbox__label">Комиксы</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="comics_1">
+                                        <label for="comics_1" class="checkbox__label">Манга</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="comics_2">
+                                        <label for="comics_2" class="checkbox__label">Манхва</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="comics_3">
+                                        <label for="comics_3" class="checkbox__label">Графические романы</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="comics_4">
+                                        <label for="comics_4" class="checkbox__label">Уся</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="realism">
+                                    <label for="realism" class="checkbox__label">Реализм</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="realism_1">
+                                        <label for="realism_1" class="checkbox__label">Магический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="realism_2">
+                                        <label for="realism_2" class="checkbox__label">Социальный</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="esoterics">
+                                    <label for="esoterics" class="checkbox__label">Эзотерика</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- Жанры, которые не хотите оценить-->
+                        <div class="form__group">
+                            <div class="form__icon-ScrollDown">
+                                <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                            </div>
+
+                            <span class="form__text">Выберете жанры, которые точно не будете рассматривать</span>
+
+                            <div class="form__icon">
+                                <img src="assets/images/Help.svg" alt="подсказка">
+                            </div>
+                            <div class="form__help">
+                                Уточняющая информация для писателей. Если вы предпочитаете
+                                фэнтэзи, но исключаете любовный роман, удастся избежать не целевых обращений
+                            </div>
+                        </div>
+                        <ul class="nested-list">
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notLikeThat">
+                                    <label for="notLikeThat" class="checkbox__label checkbox__label--bold">Нет таких</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item checkbox__item--main" id="notFantasy">
+                                    <label for="notFantasy" class="checkbox__label" >Фэнтези</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item checkbox__item--subsidiary" id="notFantasy_1">
+                                        <label for="notFantasy_1" class="checkbox__label ">Любовное</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item checkbox__item--subsidiary" id="notFantasy_2">
+                                        <label for="notFantasy_2" class="checkbox__label ">Темное</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantasy_3">
+                                        <label for="notFantasy_3" class="checkbox__label">Юмористическое</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantasy_4">
+                                        <label for="notFantasy_4" class="checkbox__label">Приключенческое</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantasy_5">
+                                        <label for="notFantasy_5" class="checkbox__label">Городское</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantasy_6">
+                                        <label for="notFantasy_6" class="checkbox__label">Историческое</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantasy_7">
+                                        <label for="notFantasy_7" class="checkbox__label">Боевое</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantasy_8">
+                                        <label for="notFantasy_8" class="checkbox__label">Славянское</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantasy_9">
+                                        <label for="notFantasy_9" class="checkbox__label">Бытовое</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantasy_10">
+                                        <label for="notFantasy_10" class="checkbox__label">Деревенское</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantasy_11">
+                                        <label for="notFantasy_11" class="checkbox__label">Героическое</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantasy_12">
+                                        <label for="notFantasy_12" class="checkbox__label">Магические академии</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantasy_13">
+                                        <label for="notFantasy_13" class="checkbox__label">Эпическое</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item checkbox__item--main" id="notFantastic">
+                                    <label for="notFantastic" class="checkbox__label">Фантастика</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item checkbox__item--subsidiary" id="notFantastic_1">
+                                        <label for="notFantastic_1" class="checkbox__label">Космическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item checkbox__item--subsidiary" id="notFantastic_2">
+                                        <label for="notFantastic_2" class="checkbox__label">ЛитРПГ</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_3">
+                                        <label for="notFantastic_3" class="checkbox__label">Боевая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_4">
+                                        <label for="notFantastic_4" class="checkbox__label">Любовная</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_5">
+                                        <label for="notFantastic_5" class="checkbox__label">Постапокалипсис</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_6">
+                                        <label for="notFantastic_6" class="checkbox__label">Научная</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_7">
+                                        <label for="notFantastic_7" class="checkbox__label">Приключенческая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_8">
+                                        <label for="notFantastic_8" class="checkbox__label">Альтернативная</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_9">
+                                        <label for="notFantastic_9" class="checkbox__label">Социальная</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_10">
+                                        <label for="notFantastic_10" class="checkbox__label">Юмористическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_11">
+                                        <label for="notFantastic_11" class="checkbox__label">РеалРПГ</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_12">
+                                        <label for="notFantastic_12" class="checkbox__label">Киберпанк</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_13">
+                                        <label for="notFantastic_13" class="checkbox__label">Историческая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_14">
+                                        <label for="notFantastic_14" class="checkbox__label">Детективная</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_15">
+                                        <label for="notFantastic_15" class="checkbox__label">Космоопера</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_16">
+                                        <label for="notFantastic_16" class="checkbox__label">Фантастический триллер</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_17">
+                                        <label for="notFantastic_17" class="checkbox__label">Бояръ-аниме</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_18">
+                                        <label for="notFantastic_18" class="checkbox__label">Стимпанк</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_19">
+                                        <label for="notFantastic_19" class="checkbox__label">Романтическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_20">
+                                        <label for="notFantastic_20" class="checkbox__label">Утопии</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notFantastic_21">
+                                        <label for="notFantastic_21" class="checkbox__label">Антиутопии</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notNovel">
+                                    <label for="notNovel" class="checkbox__label">Любовный роман</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notNovel_1">
+                                        <label for="notNovel_1" class="checkbox__label">Современный</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notNovel_2">
+                                        <label for="notNovel_2" class="checkbox__label">Остросюжетный</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notNovel_3">
+                                        <label for="notNovel_3" class="checkbox__label">Романтическая комедия</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notNovel_4">
+                                        <label for="notNovel_4" class="checkbox__label">Исторический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notNovel_5">
+                                        <label for="notNovel_5" class="checkbox__label">Детективный</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notNovel_6">
+                                        <label for="notNovel_6" class="checkbox__label">Короткий</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notNovel_7">
+                                        <label for="notNovel_7" class="checkbox__label">Служебный</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notNovel_8">
+                                        <label for="notNovel_8" class="checkbox__label">Женский</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notNovel_9">
+                                        <label for="notNovel_9" class="checkbox__label">Семейная сага</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notNovel_10">
+                                        <label for="notNovel_10" class="checkbox__label">Готический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notNovel_11">
+                                        <label for="notNovel_11" class="checkbox__label">Приключенческий</label>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notProse">
+                                    <label for="notProse" class="checkbox__label">Современная проза</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notProse_1">
+                                        <label for="notProse_1" class="checkbox__label">Подростковая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notProse_2">
+                                        <label for="notProse_2" class="checkbox__label">Молодежная</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notErotica">
+                                    <label for="notErotica" class="checkbox__label">Эротика</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notErotica_1">
+                                        <label for="notErotica_1" class="checkbox__label">Эротическая фантастика</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notErotica_2">
+                                        <label for="notErotica_2" class="checkbox__label">Жесткая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notErotica_3">
+                                        <label for="notErotica_3" class="checkbox__label">Романтическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notErotica_4">
+                                        <label for="notErotica_4" class="checkbox__label">Эротическое фентези</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notErotica_5">
+                                        <label for="notErotica_5" class="checkbox__label">Эротический триллер</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notErotica_6">
+                                        <label for="notErotica_6" class="checkbox__label">БДСМ</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notErotica_7">
+                                        <label for="notErotica_7" class="checkbox__label">Эротическая драма</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notErotica_8">
+                                        <label for="notErotica_8" class="checkbox__label">Эротический фанфик</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notMystic">
+                                    <label for="notMystic" class="checkbox__label">Мистика</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notMystic_1">
+                                        <label for="notMystic_1" class="checkbox__label">Мистический триллер</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notMystic_2">
+                                        <label for="notMystic_2" class="checkbox__label">Романтическая мистика</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notMystic_3">
+                                        <label for="notMystic_3" class="checkbox__label">Мистический детектив</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notHitmen">
+                                    <label for="notHitmen" class="checkbox__label">Попаданцы</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notHitmen_1">
+                                        <label for="notHitmen_1" class="checkbox__label">Попаданцы в другие миры</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notHitmen_2">
+                                        <label for="notHitmen_2" class="checkbox__label">Попаданцы во времени</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notHitmen_3">
+                                        <label for="notHitmen_3" class="checkbox__label">Попаданцы в тела</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notSlash">
+                                    <label for="notSlash" class="checkbox__label">Слэш</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notFamSlash">
+                                    <label for="notFamSlash" class="checkbox__label">Фемлэш</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notDrama">
+                                    <label for="notDrama" class="checkbox__label">Драма</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDrama_1">
+                                        <label for="notDrama_1" class="checkbox__label">Мелодрама</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDrama_2">
+                                        <label for="notDrama_2" class="checkbox__label">Трагедия</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDrama_3">
+                                        <label for="notDrama_3" class="checkbox__label">Психологическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDrama_4">
+                                        <label for="notDrama_4" class="checkbox__label">Политическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDrama_5">
+                                        <label for="notDrama_5" class="checkbox__label">Историческая</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notDetective">
+                                    <label for="notDetective" class="checkbox__label">Детективы</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDetective_1">
+                                        <label for="notDetective_1" class="checkbox__label">Исторический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDetective_2">
+                                        <label for="notDetective_2" class="checkbox__label">Остросюжетный</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDetective_3">
+                                        <label for="notDetective_3" class="checkbox__label">Современный</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDetective_4">
+                                        <label for="notDetective_4" class="checkbox__label">Детективный триллер</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDetective_5">
+                                        <label for="notDetective_5" class="checkbox__label">Психологический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDetective_6">
+                                        <label for="notDetective_6" class="checkbox__label">Иронический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDetective_7">
+                                        <label for="notDetective_7" class="checkbox__label">Шпионский</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDetective_8">
+                                        <label for="notDetective_8" class="checkbox__label">Женский</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDetective_9">
+                                        <label for="notDetective_9" class="checkbox__label">Приключенческий</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDetective_10">
+                                        <label for="notDetective_10" class="checkbox__label">Политический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDetective_11">
+                                        <label for="notDetective_11" class="checkbox__label">Политическая</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notDetective_12">
+                                        <label for="notDetective_12" class="checkbox__label">Романтический</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notAdult">
+                                    <label for="notAdult" class="checkbox__label">Young Adult</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notAdult_1">
+                                        <label for="notAdult_1" class="checkbox__label">New Adult</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notHorror">
+                                    <label for="notHorror" class="checkbox__label">Ужасы</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notHumor">
+                                    <label for="notHumor" class="checkbox__label">Юмор</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notAdventures">
+                                    <label for="notAdventures" class="checkbox__label">Приключения</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notPoetry">
+                                    <label for="notPoetry" class="checkbox__label">Поэзия</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notPoetry_1">
+                                        <label for="notPoetry_1" class="checkbox__label">Стихотворения о любви</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notPoetry_2">
+                                        <label for="notPoetry_2" class="checkbox__label">Стихотворения для детей</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notPoetry_3">
+                                        <label for="notPoetry_3" class="checkbox__label">Поэмы</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notChildren">
+                                    <label for="notChildren" class="checkbox__label">Детская литература</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notFairyTales">
+                                    <label for="notFairyTales" class="checkbox__label">Сказки</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notThriller">
+                                    <label for="notThriller" class="checkbox__label">Триллеры</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notThriller_1">
+                                        <label for="notThriller_1" class="checkbox__label">Психологический триллер</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notFanfic">
+                                    <label for="notFanfic" class="checkbox__label">Фанфики</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notPsychology">
+                                    <label for="notPsychology" class="checkbox__label">Психология</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notHistory">
+                                    <label for="notHistory" class="checkbox__label">Историческая литература</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notNonFiction">
+                                    <label for="notNonFiction" class="checkbox__label">Non-fiction</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notAction">
+                                    <label for="notAction" class="checkbox__label">Боевики</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notBiography">
+                                    <label for="notBiography" class="checkbox__label">Биографии и мемуары</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notReligion">
+                                    <label for="notReligion" class="checkbox__label">Религия</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notMilitaryProse">
+                                    <label for="notMilitaryProse" class="checkbox__label">Военная проза</label>
+                                </div>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notComics">
+                                    <label for="notComics" class="checkbox__label">Комиксы</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notComics_1">
+                                        <label for="notComics_1" class="checkbox__label">Манга</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notComics_2">
+                                        <label for="notComics_2" class="checkbox__label">Манхва</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notComics_3">
+                                        <label for="notComics_3" class="checkbox__label">Графические романы</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notComics_4">
+                                        <label for="notComics_4" class="checkbox__label">Уся</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notRealism">
+                                    <label for="notRealism" class="checkbox__label">Реализм</label>
+                                    <div class="form__icon-ScrollDown--rotate">
+                                        <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                                    </div>
+                                </div>
+                                <ul class="nested-sublist">
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notRealism_1">
+                                        <label for="notRealism_1" class="checkbox__label">Магический</label>
+                                    </li>
+                                    <li class="nested-list__item checkbox">
+                                        <input type="checkbox" class="checkbox__item" id="notRealism_2">
+                                        <label for="notRealism_2" class="checkbox__label">Социальный</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <div class="nested-list__wrapper">
+                                    <input type="checkbox" class="checkbox__item" id="notEsoterics">
+                                    <label for="notEsoterics" class="checkbox__label">Эзотерика</label>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="form__group">
+                            <div class="form__icon-ScrollDown">
+                                <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                            </div>
+                            <span class="form__text">Статус книги, которую возьмете на обзор</span>
+
+                            <div class="form__icon">
+                                <img src="assets/images/Help.svg" alt="подсказка">
+                            </div>
+                            <div class="form__help">
+                                Укажите статус книги
+                            </div>
+                        </div>
+                        <ul class="nested-list">
+                            <li class="nested-list__item checkbox">
+                                <input type="checkbox" class="checkbox__item" id="check_4">
+                                <label for="check_4" class="checkbox__label">Завершенная</label>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <input type="checkbox" class="checkbox__item" id="check_5">
+                                <label for="check_5" class="checkbox__label">В процессе написания</label>
+                            </li>
+                        </ul>
+
+                        <div class="form__group">
+
+                            <div class="form__icon-ScrollDown">
+                                <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                            </div>
+                            <!--<label for="format" class="form__label"></label>-->
+                            <!--<input type="text" class="form__control" id="format" placeholder="Форматы книг, которые предпочитаете читать">-->
+                            <span class="form__text">Форматы книг, которые предпочитаете читать</span>
+                            <div class="form__icon">
+                                <img src="assets/images/Help.svg" alt="подсказка">
+                            </div>
+                            <div class="form__help">
+                                Укажите все форматы книг, предпочтительные для вас.
+                            </div>
+                        </div>
+                        <ul class="nested-list">
+                            <li class="nested-list__item checkbox">
+                                <input type="checkbox" class="checkbox__item" id="check_1">
+                                <label for="check_1" class="checkbox__label">Бумажная</label>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <input type="checkbox" class="checkbox__item" id="check_2">
+                                <label for="check_2" class="checkbox__label">Электронная</label>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <input type="checkbox" class="checkbox__item" id="check_3">
+                                <label for="check_3" class="checkbox__label">Аудиокнига</label>
+                            </li>
+                        </ul>
+
+                        <div class="form__group">
+                            <div class="form__icon-ScrollDown">
+                                <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                            </div>
+                            <!--<label for="cooperation" class="form__label"></label>-->
+                            <!--<input type="text" class="form__control" id="cooperation" placeholder="Условия сотрудничества">-->
+                            <span class="form__text">Условия сотрудничества</span>
+                            <div class="form__icon">
+                                <img src="assets/images/Help.svg" alt="подсказка">
+                            </div>
+                            <div class="form__help">
+                                Рекомендуем отмечать бесплатное сотрудничество тоже: это может быть взаимопиар или другие механики, которые вы используете.
+                                Решение об условиях сотрудничества с авторами принимаете только вы, их всегда можно изменить.
+                            </div>
+                        </div>
+                        <ul class="nested-list">
+                            <li class="nested-list__item checkbox">
+                                <input type="checkbox" class="checkbox__item" id="check_6">
+                                <label for="check_6" class="checkbox__label">Платно</label>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <input type="checkbox" class="checkbox__item" id="check_7">
+                                <label for="check_7" class="checkbox__label">Бесплатно</label>
+                            </li>
+                        </ul>
+
+                        <div class="form__group">
+
+                            <div class="form__icon-ScrollDown">
+                                <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                            </div>
+
+                            <!--<label for="price" class="form__label"></label>-->
+                            <!--<input type="text" class="form__control" id="price" placeholder="Стоимость ваших услуг : обзоров книг">-->
+                            <span class="form__text">Стоимость ваших услуг : обзоров книг</span>
+                            <div class="form__icon">
+                                <img src="assets/images/Help.svg" alt="подсказка">
+                            </div>
+                            <div class="form__help">
+                                Ориентир для писателей, который поможет получать целевые запросы.
+                                Если в предыдущем пункте вы выбрали ТОЛЬКО БЕСПЛАТНО, то выбирайте здесь ТОЛЬКО БЕСПЛАТНО.
+                            </div>
+                        </div>
+                        <ul class="nested-list">
+                            <li class="nested-list__item checkbox">
+                                <input type="checkbox" class="checkbox__item" id="check_7-1">
+                                <label for="check_7-1" class="checkbox__label" id="label_check_7-1">Бесплатно</label>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <input type="checkbox" class="checkbox__item" id="check_8">
+                                <label for="check_8" class="checkbox__label">От 300 р до 1000 р</label>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <input type="checkbox" class="checkbox__item" id="check_9">
+                                <label for="check_9" class="checkbox__label">От 1000 р до 3000 р</label>
+                            </li>
+                            <li class="nested-list__item checkbox">
+                                <input type="checkbox" class="checkbox__item" id="check_10">
+                                <label for="check_10" class="checkbox__label">От 3500 р и выше</label>
+                            </li>
+                        </ul>
+
+                        <div class="form__group">
+                            <div class="form__icon-ScrollDown">
+                                <img src="assets/images/scrollDown.svg" alt="меню выбора">
+                            </div>
+                            <span class="form__text">Укажите все ссылки на свои площадки</span>
+                            <div class="form__icon">
+                                <img src="assets/images/Help.svg" alt="подсказка">
+                            </div>
+                            <div class="form__help">
+                                Предлагаем ограниченное количество площадок на первом этапе.
+                                Будем добавлять еще варианты, как только запустим сайт.
+                            </div>
+                        </div>
+                        <ul class="nested-list nested-list--center">
+                            <li class="nested-list__item socials socials__item">
+                                <label for="telegram" class="socials__label">Telegram</label>
+                                <input type="text" class="socials__control" id="telegram" placeholder="https://t.me/yourname">
+                            </li>
+
+                            <li class="nested-list__item socials socials__item">
+                                <label for="vk" class="socials__label">Вконтакте</label>
+                                <input type="text" class="socials__control" id="vk" placeholder="https://vk.com/yourname">
+                            </li>
+
+                            <li class="nested-list__item socials socials__item">
+                                <label for="instagram" class="socials__label">Instagram</label>
+                                <input type="text" class="socials__control" id="instagram" placeholder="https://www.instagram.com/yourname">
+                            </li>
+
+                            <li class="nested-list__item socials socials__item">
+                                <label for="youtube" class="socials__label">Youtube</label>
+                                <input type="text" class="socials__control" id="youtube" placeholder="https://youtube.com/yourname">
+                            </li>
+
+                            <li class="nested-list__item socials socials__item">
+                                <label for="yadzen" class="socials__label">ЯДзен</label>
+                                <input type="text" class="socials__control" id="yadzen" placeholder="https://dzen.ru/yourname">
+                            </li>
+
+                            <li class="nested-list__item socials socials__item">
+                                <label for="irecommend" class="socials__label">Irecommend</label>
+                                <input type="text" class="socials__control" id="irecommend" placeholder="https://irecommend.ru/yourname">
+                            </li>
+                        </ul>
+
+                        <div class="registration__button">
+                            <button class="btn btn--pink" id="btn">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="registration__description">
+                    <p>Приветствуем! Вместе с вами такой инструмент продвижения книги,
+                        как книжный обзор или рецензия, облегчит жизнь сетевому писателю.
+                    </p>
+                    <p>Заполняя данную анкету, вы даете согласие на свободное размещение указанных
+                        параметров в общем каталоге книжных блогеров.
+                    </p>
+                    <p>Доступ к каталогу <span class="registration__description--bold">бесплатный и свободный</span> на первом этапе для всех.
+                        Каталог состоит <span class="registration__description--bold">исключительно</span> из книжных блогеров, которые готовы,
+                        хотят или не против знакомиться с сетевыми авторами. Не редко обзоры на
+                        книги коллег делают и сами писатели с собственным блогом.
+                    </p>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "GilroyLight";
+    src: url("../fonts/GilroyLight/GilroyLight.eot");
+    src: url("../fonts/GilroyLight/GilroyLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/GilroyLight/GilroyLight.woff") format("woff"),
+    url("../fonts/GilroyLight/GilroyLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+
+    font-family: 'Gilroy';
+    src: local('Gilroy Medium'),
+    local('Gilroy-Medium'),
+    url('../fonts/Gilroy-Medium/Gilroy-Medium.woff2') format('woff2'),
+    url('../fonts/Gilroy-Medium/Gilroy-Medium.woff') format('woff'),
+    url('../fonts/Gilroy-Medium/Gilroy-Medium.ttf') format('truetype');
+
+    src: local('Gilroy Bold'),
+    local('Gilroy Bold'),
+    url('../fonts/Gilroy-Bold/Gilroy-Bold.woff2') format('woff2'),
+    url('../fonts/Gilroy-Bold/Gilroy-Bold.woff') format('woff'),
+    url('../fonts/Gilroy-Bold/Gilroy-Bold.ttf') format('truetype');
+
+    src: local('Gilroy Bold'),
+    local('Gilroy Bold'),
+    url('../fonts/Gilroy-ExtraBold.ttf') format('truetype');
+
+
+    font-weight: 500;
+    font-weight: 700;
+    font-weight: 800;
+    font-style: normal;
+}
