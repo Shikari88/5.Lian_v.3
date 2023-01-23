@@ -4,33 +4,88 @@ window.onload = function () {
     //----показавыем окно подскажки при клике на иконку подсказки
     let helpIcon = document.querySelectorAll('.form__icon');
     let formHelp = document.querySelectorAll('.form__help');
+    let popup = document.querySelector('#popup');
+    let reg = document.getElementById("registration");
+
+
+
 
     for (let i = 0; i < helpIcon.length; i++) {
         for (let j = 0; j < formHelp.length; j++) {
             helpIcon[i].addEventListener("click", function () {
                 if (i === j) {
                     formHelp[j].classList.toggle("show");
+                    popup.style.display = "block";
+
+
+                    let yu = reg.offsetHeight;
+                    popup.style.height = yu + "px";
+
+
 
                     // setTimeout(function () {
                     //     formHelp[j].style.display = "none";
                     // }, 3000);
                 }
 
+
             });
+
+
             // document.body.addEventListener("click", () => {
             //     formHelp[j].classList.toggle("hide");
             // })
-
         }
     }
+
+    //let qwe = reg.getAttribute(height);
+    //console.log(reg);
+    if (popup.style.display === "block") {
+        let yu = reg.offsetHeight;
+        popup.setAttribute(height, yu);
+        console.log(popup.offsetHeight);
+
+    }
+
+
+
+    for (let k = 0; k < formHelp.length; k++) {
+        popup.addEventListener('click', () => {
+            popup.style.display = "none";
+            formHelp[k].classList.remove("show");
+        });
+    }
+
+
+    // let headerLogo = document.querySelector(".header__logo");
+    //
+    // for (let k = 0; k < formHelp.length; k++) {
+    //     headerLogo.addEventListener("click", (e) => {
+    //
+    //         formHelp[k].classList.remove("show");
+    //
+    //
+    //     });
+    //
+    // }
+
+
+    // for (let k = 0; k < formHelp.length; k++) {
+    //     document.addEventListener("click", (e) => {
+    //         const withinBoundaries = e.composedPath().includes(formHelp[k]);
+    //         if ( ! withinBoundaries ) {
+    //             formHelp[k].style.display = 'none'; // скрываем элемент т к клик был за его пределами
+    //         }
+    //     })
+    // }
     //-----------------------------------------------------------------
 
     //----показывам выпадающее меню при клике на иконку стрелки--------
-    let iconDown = document.querySelectorAll('.form__icon-ScrollDown');
+    let formText = document.querySelectorAll('.form__text');
     let nestedList = document.querySelectorAll('.nested-list');
 
-    for (let i = 0; i < iconDown.length; i++) {
-        iconDown[i].addEventListener("click", function () {
+    for (let i = 0; i < formText.length; i++) {
+        formText[i].addEventListener("click", function () {
             for (let j = 0; j < nestedList.length; j++) {
                 if (i === j) {
                     nestedList[j].classList.toggle("show");
@@ -59,7 +114,7 @@ window.onload = function () {
 
     //----Если в предыдущем пункте вы выбрали ТОЛЬКО БЕСПЛАТНО, то выбирайте здесь ТОЛЬКО БЕСПЛАТНО.
 
-   // рабочий код. закомментирован из-за изменений в ТЗ
+    // рабочий код. закомментирован из-за изменений в ТЗ
 
     // let forMany = document.getElementById('check_6');
     // let isFree = document.getElementById('check_7');
@@ -102,6 +157,7 @@ window.onload = function () {
     //         }
     //     }
     // });
+
 
 
 
