@@ -40,14 +40,23 @@
       text-shadow: 0.1px 0.11px #e2d5e2;
       a {
         text-decoration: none;
+        //font-size: inherit;
         color: inherit;
         display: inline-block;
+        transition: font-size 200ms linear;
       }
 
     }
     a:hover {
-      border-bottom: 3px solid red;
-      border-radius: 6px 0 11px 0;
+      //border-bottom: 3px solid red;
+      //border-radius: 29px 0px 0px 11px;;
+      font-size: 1.6rem;
+      margin: 1rem 0;
+      color: aquamarine;
+      &:first-child {
+        margin-top: 0;
+      }
+
     }
   }
 }
