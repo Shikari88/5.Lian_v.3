@@ -20,12 +20,6 @@ window.onload = function () {
         }
     }
 
-    if (popup.style.display === "block") {
-        let yu = reg.offsetHeight;
-        popup.setAttribute(height, yu);
-        console.log(popup.offsetHeight);
-
-    }
 
     for (let k = 0; k < formHelp.length; k++) {
         popup.addEventListener('click', () => {

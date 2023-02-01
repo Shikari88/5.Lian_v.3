@@ -124,6 +124,7 @@ body {
 }
 .form__fieldset {
     border: 0;
+    margin: 0;
 }
 .form__text {
     width: 31rem;
