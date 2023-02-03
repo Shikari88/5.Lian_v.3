@@ -12,7 +12,7 @@
     margin: 3.5rem 0 2.8rem 0;
   }
   &__desc, &__gallery {
-    width: 55.2rem;
+    width: 48.5%;
   }
   &__title {
     font-weight: 400;
@@ -44,5 +44,34 @@
     display: inline-block;
     margin-top: 2rem;
     margin-bottom: 14.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .project-card {
+    &__desc {
+      padding-right: 2rem;
+    }
+    &__inner-info {
+      padding-bottom: 5.1rem;
+    }
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-card {
+    flex-direction: column-reverse;
+    align-items: center;
+    &__desc, &__gallery {
+      width: 84.5%;
+    }
+    &__desc {
+      margin-top: 5rem;
+      padding-right: 0;
+    }
+    &__inner-info {
+      padding-bottom: 3.1rem;
+    }
   }
 }
