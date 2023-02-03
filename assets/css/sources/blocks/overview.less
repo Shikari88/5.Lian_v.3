@@ -48,7 +48,13 @@
     }
   }
 }
-
+@media screen and(max-width: 820px) {
+  .overview {
+    &__item {
+      width: 23rem;
+    }
+  }
+}
 @media screen and(max-width: 768px) {
   .overview {
     &__item {
@@ -69,7 +75,7 @@
     &__title {
       padding: 5rem 2rem;
       h2 {
-        font-size: 2.4rem;
+        font-size: 1.7rem;
       }
     }
     &__container {
@@ -79,6 +85,7 @@
       }
       p {
         line-height: 2;
+        text-align: left;
       }
     }
     &__list {
@@ -90,15 +97,6 @@
       margin-bottom: 6rem;
       &:last-child {
         margin-bottom: 0;
-      }
-    }
-  }
-}
-@media screen and(max-width: 425px) {
-  .overview {
-    &__container {
-      p {
-        text-align: left;
       }
     }
   }
