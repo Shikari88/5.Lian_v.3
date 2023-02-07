@@ -15,6 +15,7 @@
   }
   &__item {
     width: 134.9rem;
+    height: 54.8rem;
     //width: 136.5rem;
     float: left;
     position: relative;
@@ -24,7 +25,24 @@
     img {
       width: 100%;
 
-      //тестовый ко
+      ////тестовый код смены бэка у слайдера
+      //position: relative;
+      //top: -20rem;
+      //left: 0;
+      ////
+    }
+    &--main {
+      background: url("./../images/bg/bg-new4_2.jpg");
+      background-position-x: -28rem;
+      background-position-y: -16rem;
+    }
+
+    &--right {
+      background: url("./../images/bg/bg-arduino.png");
+      background-size: cover;
+    }
+    &--left {
+      background: url("./../images/bg/bg-fullstack.png") no-repeat right/contain;
     }
   }
   &__next, &__prev {
@@ -32,6 +50,9 @@
     width: 4.2rem;
     height: 4.2rem;
     top: 50%;
+    //тестовый код смены бэка у слайдера
+    //top: 35%;
+    //
     border-radius: 50%;
     border: 1px solid #000 ;
     background: transparent;
@@ -64,6 +85,8 @@
   &__content {
     position: absolute;
     text-align: center;
+    top: auto;
+    left: auto;
   }
   &__nav {
     position: absolute;
@@ -78,10 +101,28 @@
       display: inline-block;
       width: 2rem;
       height: 2rem;
-      background: #fff;
+      background: #b57575;
       border-radius: 50%;
       margin: 0 1rem;
       cursor: pointer;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .slider {
+    &__item {
+      &--main {
+        background-position-x: -61rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .slider {
+    &__item {
+      &--main {
+        background-position-x: -86rem;
+      }
     }
   }
 }
