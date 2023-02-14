@@ -1,0 +1,58 @@
+*,*::before,*::after {
+  box-sizing: border-box; //padding и border не влияют на ширину блока
+}
+html {
+  font-size: 62.5%; //для адаптивности. Чтобы было удобно считать в rem. В % задаем сво-во, чтобы считать от шрифта по умолчанию 16px
+}
+body {
+  //font:
+  font-size: 1.6rem ;
+  font-family: 'Source Sans Pro', sans-serif;
+  // если объединить все в font, то в IE10 се шрифты и размеры полностью сбрасываются. Если разделить, то отображаются.
+  margin: 0;
+  color: @color-black-text;
+  position: relative;
+  /*&::after {
+    display: none;
+    content: '';
+    position: absolute;
+    background-color: #3b515a;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.4;
+  }*/
+}
+.main::after {
+  content: '';
+  position: absolute;
+  background-color: #3b515a;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.4;
+}
+.container {
+  max-width: 94rem;
+  margin: 0 auto;
+  @media screen and (max-width:800px) {
+    max-width: 74rem;
+  }
+  @media screen and (max-width:768px) {
+  max-width: 70rem;
+  }
+  @media screen and (max-width:576px) {
+    max-width: 50rem;
+  }
+  @media screen and (max-width:425px) {
+    max-width: 30rem;
+  }
+}
+.hidden {
+  display: none;
+}
+h1,h2,h3 {
+  margin: 0;
+}

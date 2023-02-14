@@ -1,0 +1,30 @@
+.footer{
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    @media screen and (max-width: 576px){
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    margin-left: 1rem;
+    @media screen and (max-width: 576px){
+      margin: 0 3rem 0 0 ;
+    }
+  }
+  &__privacy {
+    color: @color-blue-light;
+    @media screen and (max-width: 576px){
+      margin: 1.5rem auto;
+    }
+  }
+  &__requisites {
+    width: 14rem;
+    text-align: right;
+    @media screen and (max-width: 576px){
+      text-align: center;
+    }
+  }
+}

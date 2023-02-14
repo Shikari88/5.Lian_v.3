@@ -1,0 +1,57 @@
+.callback {
+  background: url("./../images/callback-bg.png") no-repeat center/cover;
+  position: relative;
+  &::after {
+    content: '';
+    background-color: @color-bg-purple;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    padding: 12.5rem 0 14rem 0;
+    position: relative;
+    z-index: 1;
+  }
+  &__info {
+    width: 37rem;
+  }
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    .font-helvetica;
+    text-transform: uppercase;
+    margin-bottom: 5.5rem;
+  }
+  &__desc {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .callback {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__info {
+      width: inherit;
+      text-align: center;
+      padding-bottom: 5rem;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .callback {
+    &__container {
+      padding: 8rem 0;
+    }
+    &__desc {
+      padding: 0 2rem;
+    }
+  }
+}

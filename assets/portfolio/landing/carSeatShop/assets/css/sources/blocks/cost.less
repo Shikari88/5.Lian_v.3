@@ -1,0 +1,44 @@
+.cost {
+  background: #ffffff;
+  width: 15rem;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  border-radius: 50%;
+  @media screen and (max-width: 768px){
+    width: 15.9rem;
+  }
+  @media screen and (max-width: 576px){
+    display: none;
+  }
+
+  &__before{
+    font-size: 1.8rem;
+    text-decoration: line-through;
+    border-bottom: 1px solid @color-gray;
+    padding-bottom: 0.8rem;
+    @media screen and (max-width: 768px){
+      font-size: 2.5rem;
+      font-weight: 600;
+      padding-left: 1rem;
+    }
+  }
+  &__after{
+    font-size: 3rem;
+    color: @color-red-text;
+    padding-left: 1.1rem;
+  }
+  &__header-free-delivery {
+    color: @color-blue-light;
+    font-size: 2.3rem;
+    font-weight: 700;
+  }
+  &__before-free-delivery {
+    font-size: 1.4rem;
+    margin-top: 1.3rem;
+    font-weight: 600;
+  }
+  &__after-free-delivery {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+}

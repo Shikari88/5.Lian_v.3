@@ -1,0 +1,100 @@
+.form {
+  width: 60.5rem;
+  &__group {
+    display: flex;
+  }
+  &__fieldset {
+    margin: 0;
+    padding: 0;
+  }
+  &__fieldset, &__control {
+    border: 2px solid #fff;
+  }
+  &__control {
+    padding: 2rem 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    font: 1.8rem "HelveticaNeueCyr", sans-serif;
+    height: 4rem;
+    max-width: 60.5rem;
+    outline: none;
+    &--md {
+    width: 50%;
+    }
+    &--lg {
+      width: 100%;
+
+      resize: none;
+    }
+    &--height-lg{
+      height: 16rem;
+      margin: 0;
+    }
+    &:focus {
+      &::-webkit-input-placeholder{
+        color: #8F8F8F;
+      }
+      &::-moz-placeholder{
+        color: #8F8F8F;
+      }
+
+    }
+    &::-moz-placeholder {
+      font-size: 1.8rem;
+
+    }
+    &::-webkit-input-placeholder {
+      color: #fff;
+      font-size: 1.8rem;
+    }
+    &:-ms-input-placeholder {
+      color: #fff;
+    }
+
+  }
+  &__action {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+  &__text, &__btn {
+    text-transform: uppercase;
+  }
+  &__text {
+    padding-left: 2.5rem;
+    font-size: 1.2rem;
+  }
+  &__btn {
+    border-radius: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 425px){
+  .form {
+    width: 35.5rem;
+    &__group {
+      flex-direction: column;
+    }
+    &__control--md {
+      width: 100%;
+    }
+    &__action {
+      flex-direction: column;
+    }
+    &__text {
+      padding-left: inherit;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    &__btn {
+      width: 20rem;
+      margin: auto;
+    }
+  }
+}
+@media screen and (max-width: 425px){
+  .form {
+    width: 29.5rem;
+  }
+}

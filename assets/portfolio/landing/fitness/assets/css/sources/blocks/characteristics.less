@@ -1,0 +1,83 @@
+.characteristics {
+  background: url("../images/bg-white.png") no-repeat center / cover;
+
+&__header {
+  text-align: center;
+  padding: 2.6rem;
+  font-size: @font-size*2;
+}
+
+&__container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+  .media-max(585px, {
+    flex-wrap: wrap;
+    justify-content: center;
+  });
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1rem;
+
+  .media-max(768px, {
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 1.6rem;
+  });
+  li {
+    .media-max(585px, {
+      margin-left: -2rem;
+    });
+  }
+}
+
+
+&__price {
+  position: relative;
+  top: 1.5%;
+  left: 0;
+  p {
+    display: block;
+    position: absolute;
+    top: -1.3rem;
+    left: 1.6rem;
+    color: @color-white;
+    font-size: @font-size+0.6;
+
+  }
+}
+
+&__discount {
+  position: absolute;
+  top: 0;
+  left: 31.6rem;
+  color: @color-white;
+  font-size: @font-size+0.6;
+  background-color: @color-yellow;
+  padding: 1.1rem 2rem;
+}
+
+  &__gallery {
+    div {
+      background: white;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    h3 {
+      margin: 0;
+    }
+    .media-max(585px, {
+      padding-top: 2rem;
+    });
+
+    .media-max(768px, {
+      text-align: center;
+    });
+  }
+}
+

@@ -1,0 +1,199 @@
+.projects{
+  background: @color-light-gray;
+  &__header {
+    position: relative;
+    background: @color-bg-purple;
+    text-transform: uppercase;
+    &::before {
+      content: 'Our projects';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 1.7rem;
+      text-align: center;
+      margin: auto;
+      color: @color-light-gray;
+      .heading-bg(9.6rem, bold);
+      .font-tahoma;
+    }
+    &::after {
+      //Duplication
+      content: '';
+      position: absolute;
+      z-index: 2;
+      background-color: rgba(116,47,150,0.67);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &__title {
+    font-size: 3.4rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 4.5rem 0;
+    color: #fff;
+    position: relative;
+    z-index: 3;
+  }
+  &__main {
+    background: @color-light-gray;
+    max-width: 150rem;
+    margin: auto;
+  }
+  &__img-row-1 {
+    width: 50%;
+    img {
+      height: 42.6rem;
+    }
+  }
+  &__img-row-2 {
+    width: 25%;
+    img {
+      height: 32.5rem;
+    }
+  }
+  &__img-row-1, &__img-row-2 {
+    margin: 0;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    figcaption {
+      background: @color-orange;
+      position: absolute;
+      top: 2rem;
+      right: 3rem;
+      bottom: 12rem;
+      left: 3rem;
+      text-align: center;
+      padding-top: 6rem;
+      opacity: 0;
+      transition-duration: 1s;
+      &:hover{
+        opacity: 1;
+        background: rgba(246,174,72,0.9);
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        height: 100%;
+      }
+    }
+  }
+  &__row-1, &__row-2 {
+    display: flex;
+    line-height: 0; //учитывая что img по умолчанию строчно-блоч эл, то по умолчаниею у него есть межстрочный интервал,
+    //котоорый оставляет между изображениями отступы
+  }
+  &__footer {
+    text-align: center;
+    background: @color-bg-purple-dark;
+  }
+  &__btn {
+    margin: 2.5rem 0;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    color: #fff;
+    font-weight: bold;
+    &:active {
+      .btn-active-white();
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .projects {
+    &__img-row-1 {
+      img {
+        height: 31.5rem;
+      }
+    }
+    &__img-row-1, &__img-row-2 {
+      figcaption {
+        padding-top: 0;
+      }
+    }
+    &__img-row-2 {
+      img {
+        height: 22.5rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects {
+    &__header::before {
+      font-size: 7.6rem;
+      top: 1.3rem;
+    }
+    &__img-row-1 {
+      img {
+        height: 39.5rem;
+      }
+    }
+    &__img-row-2 {
+      img {
+        height: 27.5rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects {
+    &__row-1 {
+      flex-direction: column;
+    }
+    &__img-row-1 {
+      width: 100%;
+    }
+    &__row-2 {
+      flex-wrap: wrap;
+    }
+    &__img-row-2 {
+      width: 50%;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .projects{
+    &__header::before {
+      font-size: 4.6rem;
+    }
+    &__title {
+      padding-bottom: 2.5rem;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .projects{
+    &__header::before {
+      font-size: 3.6rem;
+    }
+    &__title {
+      font-size: 3rem;
+      padding: 3rem 0;
+    }
+    &__img-row-1 {
+      img {
+        height: 23.5rem;
+      }
+    }
+    &__img-row-2 {
+      img {
+        height: 17.5rem;
+      }
+    }
+    &__img-row-1, &__img-row-2 {
+      figcaption {
+        bottom: 2rem;
+      }
+    }
+    &__row-2 {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.advantages {
+  &__container {
+    max-width: 78rem;
+    @media screen and (max-width:800px) {
+      max-width: 74rem;
+    }
+    @media screen and (max-width:768px) {
+      max-width: 70rem;
+    }
+    @media screen and (max-width:576px) {
+      max-width: 50rem;
+    }
+    @media screen and (max-width: 425px) {
+      max-width: 30rem;
+    }
+  }
+  &__header {
+    font-size: 3.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 8rem auto;
+    @media screen and (max-width: 425px) {
+      font-size: 2.8rem;
+      margin: 4.4rem auto;
+    }
+  }
+  &__arrow {
+    padding-right: 2rem;
+    width: 19.9rem;
+    margin: 0 auto;
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+    img {
+      width: 100%;
+      display: block;
+    }
+    &--left {
+      position: relative;
+      right: 4rem;
+    }
+  }
+}

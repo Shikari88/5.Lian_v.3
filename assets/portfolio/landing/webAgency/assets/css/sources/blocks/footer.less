@@ -1,0 +1,27 @@
+.footer{
+  background: @color-orange;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+  }
+  &__info {
+    padding: 2rem 0;
+
+  }
+  &__socials {
+    display: flex;
+    margin-right: 20rem;
+    @media screen and (max-width: 768px) {
+      margin-right: 11rem;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .footer {
+    &__container {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+}

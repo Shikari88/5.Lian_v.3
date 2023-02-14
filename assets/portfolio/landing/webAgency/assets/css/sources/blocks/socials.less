@@ -1,0 +1,41 @@
+.socials{
+  display: flex;
+  align-items: center;
+  &__icon {
+    position: relative;
+    height: 4.8rem;
+    &--inst, &--vk {
+      position: absolute;
+
+    }
+    &--inst, &--vk, a {
+      height: 4.8rem;
+      display: block;
+    }
+    &--inst {
+      left: 0;
+      width: 4.2rem;
+      background-image: url("./../images/socials/social_sprites.png");
+      background-size: 11rem;
+    }
+    &--vk {
+      left: 5.6rem;
+      width: 5rem;
+      background: url("./../images/socials/social_sprites.png") 5rem 0;
+      background-size: 11rem;
+    }
+  }
+  &__text {
+    padding-right: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 425px){
+  .socials{
+    flex-direction: column;
+    &__text {
+      margin: 2rem 0 1rem 12rem;
+    }
+  }
+}

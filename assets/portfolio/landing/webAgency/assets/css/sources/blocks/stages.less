@@ -1,0 +1,100 @@
+.stages {
+
+  &__btn {
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid;
+    &:hover {
+      background: #F6A623;
+      border: 1px solid #F1F1F1;
+      transition-duration: 1s;
+    }
+    &:active{
+      background: linear-gradient(186deg, rgba(2,0,36,1) 0%, rgba(135,139,140,1) 51%, rgba(0,212,255,1) 100%);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40rem;
+    padding: 2.5rem;
+    &:hover {
+      background: @color-orange;
+      color: #fff;
+    }
+  }
+  &__img {
+    height: 5.8rem;
+  }
+  &__icon-rocket {
+    width: 3rem;
+  }
+  &__icon-mobile {
+    width: 2.8rem;
+  }
+  &__icon-lifeline {
+    width: 5.5rem;
+
+  }
+  &__text {
+    padding: 1.8rem 0 2.5rem 0;
+  }
+  &__title {
+    padding-top: 1rem;
+
+  }
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+  }
+  &__arrow{
+    width: 2.2rem;
+    display: block;
+
+    &:hover {
+      .arrow-lg();//возможно, не стоь продуктивное применение, но как пример применения технологии
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+}
+@media screen and (max-width: 768px){
+  .stages {
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__item {
+      border-bottom: 5px solid @color-light-gray;
+      padding: 4rem 2.5rem;
+      &:last-child{
+        border-bottom: 0;
+      }
+    }
+    &__title {
+      margin-left: 2rem;
+    }
+  }
+}
+@media screen and (max-width: 375px){
+  .stages {
+    &__item {
+      width: 32rem;
+    }
+  }
+}
+@media screen and (max-width: 320px){
+  .stages {
+    &__item {
+      width: 30rem;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Examples",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-less": "^3.5.0",
+    "gulp-watch": "^5.0.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shikari88/Fitnes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shikari88/Fitnes/issues"
+  },
+  "homepage": "https://github.com/Shikari88/Fitnes#readme",
+  "description": ""
+}

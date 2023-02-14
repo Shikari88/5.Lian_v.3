@@ -1,0 +1,68 @@
+.advantage {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+      &--reverse{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+      padding-bottom: 3rem;
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+  &__text {
+    width: 50%;
+    @media screen and (max-width: 576px) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  }
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: @color-blue-light;
+    margin-bottom: 4rem;
+    @media screen and (max-width: 425px) {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+    }
+  }
+  &__subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    @media screen and (max-width: 768px) {
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+    @media screen and (max-width: 425px) {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  &__img-shadow {
+    width: 8rem;
+    margin: 0 auto;
+    height: 1rem;
+    background: #e9e9eb;
+    display: block;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem 1rem #e9e9eb;
+  }
+  &__img {
+    width: 30rem;
+    @media screen and (max-width: 425px) {
+      width: 25rem;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.credo {
+  background: url("./../images/credo-bg.png") center/cover;
+  position: relative;
+  &::after {
+    content: '';
+    background-color: rgba(116,47,150,0.67);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  &__title {
+    .heading;
+    .font-exo;
+    text-transform: uppercase;
+    margin: 13rem 0 7rem;
+    @media screen and (max-width: 768px) {
+      font-size: 4rem;
+    }
+    @media screen and (max-width: 425px) {
+      margin: 7rem 0;
+    }
+    @media screen and (max-width: 320px) {
+      font-size: 2.8rem;
+    }
+  }
+  &__desc {
+    margin: 0 11.5rem 16rem;
+    font-size: 2.4rem;
+    font-weight: inherit;
+    .font-helvetica;
+    @media screen and (max-width: 1024px) {
+      letter-spacing: 2px;
+    }
+    @media screen and (max-width: 768px) {
+      margin: 0 2.5rem 16rem;
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 425px) {
+      margin-bottom: 10rem;
+    }
+    @media screen and (max-width: 320px) {
+      font-size: inherit;
+    }
+  }
+}

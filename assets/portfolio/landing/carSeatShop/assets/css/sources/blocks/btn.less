@@ -1,0 +1,49 @@
+.btn {
+  display: inline-block; // button и input - строчно-блочные по умолчанию
+  // в общих стилях прописываем для кнопок из тега a или span, которые по умолчанию блочные
+  border: 0; //обнуляем рамки
+  outline: 0; //убираем обводку
+  background: transparent;//устанавливаем прозрачный фон
+  font-family: inherit;//наследуем значение родителя
+  text-decoration: none; //обнуляем декорирование текса (нижнее подчеркивание и прочее)
+  vertical-align: middle;// в разных браузерах мб разное. Задаем по-умолчанию
+  border-radius: 2.5rem;
+  padding: 1.5rem 0;
+  font-size: 1.4rem;
+  @media screen and (max-width: 768px){
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 1.6rem;
+  }
+  &--blue {
+    background: @color-blue;
+    color: #fff;
+
+  }
+  &--blue:hover{
+    background: @color-gray;
+    color: #000;
+    @media screen and (max-width: 768px){
+      box-shadow: 0 0 1rem 1rem @color-blue-light;
+    }
+  }
+  &--blue:active{
+    background: #CACACA;
+  }
+  &--blue:active{
+    //background: green;
+  }
+  &--uptext{
+    text-transform: uppercase;
+  }
+  &--shadow{
+    box-shadow: 0 0.4rem 0.5rem 0 #3c21d173;
+  }
+  &--shadow-light{
+    @media screen and (max-width: 768px), (max-width: 800px) {
+      box-shadow: 0 0 1rem 1rem;
+    }
+
+  }
+}

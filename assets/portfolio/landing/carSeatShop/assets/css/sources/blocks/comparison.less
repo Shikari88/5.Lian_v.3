@@ -1,0 +1,123 @@
+.comparison {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+    margin: 4.5rem 0 5rem 0;
+    font-size: 2.2rem;
+  }
+  &__header-item {
+    width: 15rem;
+    &--left {
+      text-align: right;
+      margin-right: 1.5rem;
+    }
+    &--right {
+      color: @color-blue-light;
+      margin-left: 1.5rem;
+      @media screen and (max-width: 425px) {
+        text-align: center;
+        width: 28.5rem;
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8rem;
+  }
+  &__text {
+    width: 19rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    @media screen and (max-width: 576px){
+      margin-right: 4.3rem;
+    }
+    @media screen and (max-width: 425px){
+      margin: 0 auto;
+      width: 24rem;
+      text-align: center;
+      border-bottom: 1px solid;
+    }
+    &--blue {
+      color: @color-blue-light;
+    }
+    &--reverse {
+      text-align: right;
+      @media screen and (max-width: 576px){
+        margin: 0 0 0 4.3rem;
+        width: 20.7rem;
+      }
+    }
+  }
+  @media screen and (max-width: 425px) {
+    &__text--reverse, &__header-item--left {
+      display: none;
+    }
+  }
+
+  &__text-item {
+    line-height: 1.1;
+    margin-bottom: 3rem;
+    @media screen and (max-width: 576px) {
+      &--br-right{
+        padding-right: 1.7rem;
+        border-right: 1px solid rgba(0, 0, 0, 0.26);
+      }
+    }
+  }
+
+  &__img {
+    background: url("./../images/comparison.png") no-repeat 1.4rem/contain;
+    display: flex;
+    width: 21rem;
+    height: 29.9rem;
+    position: relative;
+    @media screen and (max-width: 576px){
+      display: none;
+    }
+    &--left, &--right {
+      position: relative;
+      width: 8.7rem;
+      @media screen and (max-width: 768px), (max-width: 800px){
+        display: none;
+      }
+      img {
+        position: relative;
+        display: block;
+        width: 100%;
+      }
+    }
+    &--left {
+      right: 15rem;
+    }
+    &--right {
+      left: 18rem;
+    }
+  }
+  &__arrow {
+    position: relative;
+    left: 0;
+  }
+  &__arrow-lf-1, &__arrow-rg-1 {
+    top: 0.5rem;
+    //left: 0;
+
+  }
+  &__arrow-lf-2,&__arrow-rg-2 {
+    top: 5.5rem;
+    //left: 0;
+  }
+  &__arrow-lf-3,&__arrow-rg-3 {
+    top: 8.9rem;
+    //left: 0;
+  }
+  &__arrow-lf-4,&__arrow-rg-4 {
+    top: 11.6rem;
+    //left: 0;
+  }
+}

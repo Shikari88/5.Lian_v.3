@@ -1,0 +1,110 @@
+.care {
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    padding: 8rem 0;
+    align-items: center;
+  }
+  &__info {
+    width: 55rem;
+    padding: 0 3.3rem;
+  }
+  &__title {
+    .heading;
+    .font-helvetica;
+    margin-bottom: 4.5rem;
+    position: relative;
+    &::before {
+      content: "Be careful";
+      position: absolute;
+      top: -3rem;
+      left: -5rem;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      color: @color-light-gray;
+      text-transform: uppercase;
+      .heading-bg(7.7rem, bold);
+      .font-tahoma;
+    }
+    @media screen and (max-width: 1024px) {
+        &::before {
+          left: -3rem;
+        }
+    }
+  }
+  &__desc {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+  &__img {
+    width: 43.5rem;
+    img {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .care {
+    &__title::before {
+      left: -3rem;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .care {
+    &__title {
+      font-size: 3.8rem;
+      &::before {
+        font-size: 6.7rem;
+        left: -0.3rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px){
+  .care {
+    &__container {
+      flex-direction: column;
+      padding: 6rem 0;
+    }
+    &__info {
+      width: 42rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    &__img {
+      width: 40.5rem;
+    }
+  }
+}
+@media screen and (max-width: 375px){
+  .care {
+    &__info {
+      width: 34rem;
+    }
+    &__title::before {
+      left: 0;
+      font-size: 5.5rem;
+    }
+    &__img {
+      width: 29.5rem;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .care {
+    &__info {
+      width: 30rem;
+    }
+    &__title {
+      font-size: 3.5rem;
+      &::before {
+        font-size: 5rem;
+      }
+    }
+    &__desc {
+      font-size: inherit;
+    }
+  }
+}

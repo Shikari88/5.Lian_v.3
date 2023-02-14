@@ -1,0 +1,43 @@
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-weight: 300;
+  font-family: Jost, sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  letter-spacing: 0.1rem;
+}
+
+.container {
+  max-width: 124.5rem;
+  margin: 0 auto;
+  @media screen and (max-width: 1024px) {
+   max-width: 94.2rem;
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 70.6rem;
+  }
+  @media screen and (max-width: 425px) {
+    max-width: 39.1rem;
+  }
+  @media screen and (max-width: 375px) {
+    max-width: 34.5em;
+  }
+  @media screen and (max-width: 320px) {
+    max-width: 29.5em;
+  }
+}
+h1,h2,h3 {
+  margin: 0;
+}
+.hidden {
+  display: none;
+}
+img {
+  border: 0; // в IE 10 отображается border
+}

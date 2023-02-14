@@ -1,0 +1,49 @@
+.stats {
+  width: 25rem;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  position: relative;
+  &__item {
+    margin: 3.5rem 3rem 12rem;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 5rem;
+    }
+  }
+  &__img {
+    position: absolute;
+    display: flex;
+    img {
+      width: 5.4rem;
+      padding: 0 0.9rem;
+      position: relative;
+      bottom: 1.5rem;
+      left: 0;
+    }
+    &--br-top {
+      display: block;
+      width: 9.6rem;
+      border-top: 2px solid;
+    }
+  }
+  &__numb {
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin-top: 3rem;
+  }
+  &__desc {
+    font-size: 1.8rem;
+    margin-bottom: 3.1rem;
+  }
+}
+@media screen and (max-width: 320px){
+  .stats {
+    width: 20rem;
+    &__img--br-top {
+      width: 7.2rem;
+    }
+    &__numb {
+      font-size: 3.5rem;
+    }
+  }
+}

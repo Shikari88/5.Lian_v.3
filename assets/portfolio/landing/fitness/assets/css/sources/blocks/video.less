@@ -1,0 +1,22 @@
+.video {
+  background: url("../images/video/video-man.png") no-repeat center / cover;
+    .media-max (768px, {
+      background: url("../images/video/bg-fon.png") no-repeat center / cover;
+    });
+
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 5rem;
+    .media-max (768px, {
+      justify-content: center;
+    });
+
+  }
+
+  &__header {
+    .header-param (@header-text-align, @header-padding, @font-size);
+    color: @color-white;
+  }
+}

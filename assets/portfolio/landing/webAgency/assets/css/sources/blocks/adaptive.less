@@ -1,0 +1,145 @@
+.adaptive {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 16rem auto;
+    //max-width: 150rem;
+  }
+  &__info {
+    margin:0 9rem 0 20rem;
+
+  }
+  &__title {
+    .heading;
+    .font-helvetica;
+    margin-bottom: 4.5rem;
+    position: relative;
+    &::before {
+      content: "Adaptive";
+      position: absolute;
+      top: -3rem;
+      left: -5rem;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      color: @color-light-gray;
+      text-transform: uppercase;
+      .heading-bg(7.7rem, bold);
+      .font-tahoma;
+    }
+  }
+  &__desc {
+    font-size: 2rem;
+    line-height: 1.5;
+    width: 40rem;
+  }
+  &__img {
+    display: flex;
+    align-items: flex-end;
+  }
+  &__img-iphone {
+    width: 11.6rem;
+
+  }
+  &__img-ipad {
+    width: 24.4rem;
+    margin: 0 2rem 0 5.5rem;
+
+  }
+  &__img-macbook {
+    width: 22.1rem;
+  }
+  &__img-iphone, &__img-ipad, &__img-macbook {
+    img {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .adaptive {
+    &__info {
+      margin-left: 7rem;
+    }
+    &__img-macbook {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .adaptive {
+    &__img-ipad {
+      display: none;
+    }
+    &__img {
+      margin-right: 4rem;
+    }
+    &__title::before {
+      left: 0;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .adaptive {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 10rem auto;
+    }
+    &__info {
+      margin: 0 2rem;
+    }
+    &__title{
+      font-size: 3.8rem;
+      &::before {
+        font-size: 5.5rem;
+      }
+    }
+    &__img {
+      margin-top: 5rem;
+      margin-right: 0;
+    }
+    &__img-ipad {
+      display: block;
+      margin: 0 0 0 1rem;
+      width: 16.4rem;
+    }
+    &__img-iphone {
+      width: 8.6rem;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .adaptive {
+    &__info {
+      margin: 0;
+    }
+    &__desc {
+      font-size: 1.6rem;
+      width: 30rem;
+    }
+
+  }
+}
+@media screen and (max-width: 320px) {
+  .adaptive {
+    &__title{
+      font-size: 2.8rem;
+      &::before {
+        font-size: 5rem;
+      }
+    }
+    &__desc {
+      font-size: 1.6rem;
+      padding: 0 2rem;
+      width: 30rem;
+    }
+    &__img-ipad {
+      width: 14.4rem;
+    }
+    &__img-iphone {
+      width: 6.6rem;
+    }
+  }
+}

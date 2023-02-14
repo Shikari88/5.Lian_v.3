@@ -1,0 +1,61 @@
+.dev {
+  position: relative;
+  &__container {
+    margin-bottom: 35rem;
+  }
+  &__bg {
+    background: url("./../images/dev-bg.png") no-repeat;
+    background-size: contain;
+    width: 48.594%;
+    position: absolute;
+    top: -3rem;
+    left: 0;
+  }
+  &__title {
+    padding: 7.1rem 0 35rem 7rem;
+    font-size: 5rem;
+    color: #fff;
+  }
+  &__offers {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    top: 19rem;
+  }
+}
+@media screen and (max-width: 786px) {
+  .dev {
+    &__title {
+      font-size: 4rem;
+    }
+    &__offers {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .dev {
+    &__title {
+      font-size: 3rem;
+      padding-left: 4rem;
+    }
+    &__bg {
+      width: 58%;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .dev {
+    &__title {
+      padding-left: 2rem;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .dev {
+    &__title {
+      font-size: 2.5rem;
+    }
+  }
+}

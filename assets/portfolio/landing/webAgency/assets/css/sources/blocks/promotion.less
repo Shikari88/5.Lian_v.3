@@ -1,0 +1,88 @@
+.promotion {
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10rem;
+  }
+  &__info {
+    width: 57rem;
+  }
+  &__title {
+    .heading;
+    margin-bottom: 5rem;
+    position: relative;
+    &::before {
+      content: "Be the first";
+      position: absolute;
+      z-index: -1;
+      color: @color-light-gray;
+      font-size: 8rem;
+      text-transform: uppercase;
+      top: -2.5rem;
+      left: -6rem;
+      letter-spacing: 0.3rem;
+    }
+  }
+  &__desc {
+    font-size: 2rem;
+    line-height: 2;
+  }
+  &__img-google, &__img-ya {
+    width: 20.5rem;
+    img {
+      width: 100%;
+    }
+  }
+  &__img-google {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .promotion {
+    &__title::before {
+      font-size: 5rem;
+      left: 0;
+    }
+    &__desc {
+      font-size: 1.6rem;
+      padding-right: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .promotion {
+    &__container {
+      flex-direction: column;
+    }
+    &__info {
+      width: 35rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    &__desc {
+      padding-right: 0;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .promotion {
+    &__img-google,&__img-ya {
+      width: 16.5rem;
+    }
+
+  }
+}
+@media screen and (max-width: 320px) {
+  .promotion {
+    &__title {
+      font-size: 3.5rem;
+    }
+    &__img-google,&__img-ya {
+      width: 16.5rem;
+    }
+    &__info {
+      width: 30rem;
+    }
+  }
+}

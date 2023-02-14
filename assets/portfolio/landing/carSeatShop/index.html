@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CarSeatShop</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="assets/js/public/es6/map.js"></script>
+        <script src="assets/js/public/es6/form.js"></script>
+    </head>
+    <body>
+
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__logo logo">
+                    <a href="#offer">
+                        <div class="logo__img">
+                            <img src="./assets/images/logo.png" alt="Логотип">
+                        </div>
+                        <div class="logo__text">Крылатко</div>
+                    </a>
+                </div>
+                <div class="header__contacts callback">
+                    <div class="callback__phone">+7 (950) 733-31-70</div>
+                    <a href="#" class="callback__text order-call" >Заказать обратный звонок</a>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="form form--popup-order-call popup popup-order-call" id="popup-order-call">
+            <div class="popup__icon-closed">
+                <img src="./assets/images/icon-toclose.svg" alt="Закрыть">
+            </div>
+            <div class="form__header">
+                <div class="form__title">Обратный звонок</div>
+                <div class="form__subtitle">Оставьте номер, мы вам перезвоним</div>
+            </div>
+            <div class="form__inner">
+                <div class="form__group">
+                    <label for="popup-call" class="hidden">Ваше телефон</label>
+                    <input class="form__control" type="tel" name="phone" id="popup-call" placeholder="Ваш телефон">
+                    <button class="btn btn--blue btn--uptext btn--shadow"><span class="order-completed" data-target="#show-tooltip-0">Перезвоните мне</span></button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form form--popup-completed popup" id="popup-completed">
+            <div class="popup__icon-closed">
+                <img src="./assets/images/icon-toclose.svg" alt="Закрыть">
+            </div>
+            <div class="form__header">
+                <div class="form__title">Спасибо за вашу заявку!</div>
+                <div class="form__subtitle form__subtitle--mb">Менеджер свяжется с вами в ближайшее время.</div><!--Сокращаем внешний нижний отступ-->
+            </div>
+        </div>
+
+
+        <div class="offer" id="offer">
+            <div class="container">
+                <div class="offer__container">
+                    <div class="offer__header">
+                        <h1 class="offer__title">Серцифицированные детские бескаркасные автокресла</h1>
+                        <div class="offer__subtitle">с бесплатной доставкой по Санкт-Петербургу</div>
+                    </div>
+                    <div class="offer__form form">
+                        <div class="form__header">
+                            <div class="form__title">Нет времени читать?</div>
+                            <div class="form__subtitle">Оставьте номер, мы вам перезвоним</div>
+                        </div>
+                        <div class="form__inner">
+                            <div class="form__group">
+                                <label for="offer_phone" class="hidden">Ваше телефон</label>
+                                <input class="form__control" type="tel" name="phone" id="offer_phone" placeholder="Ваш телефон">
+                                <button class="btn btn--blue btn--uptext btn--shadow order-completed"><span class="order-completed" data-target="#show-tooltip">Перезвоните мне</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="advantages">
+            <div class="advantages__container container">
+                <div class="advantages__header">Почему именно бескаркасные кресла?</div>
+                <div class="advantages__arrow advantages__arrow--right">
+                    <img src="./assets/images/arrows/arrow_advantages_rigth.png" alt="стрелочка направо" >
+                </div>
+                <div class="advantage advantage__item">
+                    <div class="advantage__text">
+                        <div class="advantage__title">Оставляет ваш салон свободным</div>
+                        <div class="advantage__subtitle">Бескаркаяное автокресло «Смайл» можно не снимать во
+                            время перевозки взрослого или груза.
+                            Кресло весит всего 700 грамм и установить его можно в любой автомобиль.</div>
+                    </div>
+                    <div class="advantage__img">
+                        <img src="./assets/images/advantages_1.png" alt="Свободный салон">
+                        <span class="advantage__img-shadow"></span>
+                    </div>
+                </div>
+                <div class="advantages__arrow advantages__arrow--left">
+                    <img src="./assets/images/arrows/arrow_advantages_left.png" alt="стрелочка направо">
+                </div>
+                <div class="advantage advantage__item advantage__item--reverse">
+                    <div class="advantage__text">
+                        <div class="advantage__title">Подходит к большинству групп детей</div>
+                        <div class="advantage__subtitle">Кресло рассчитано на возраст от 1 года до 12 лет (от 9 кг до 36 кг).
+                        Имеет пятиточную фиксацию ребенка, как в гоночном автомобиле.</div>
+                    </div>
+                    <div class="advantage__img">
+                        <img src="./assets/images/advantages_2.png" alt="Подходит для многих детей">
+                        <span class="advantage__img-shadow"></span>
+                    </div>
+                </div>
+                <div class="advantages__arrow advantages__arrow--right">
+                    <img src="./assets/images/arrows/arrow_advantages_rigth.png" alt="стрелочка направо">
+                </div>
+                <div class="advantage advantage__item">
+                    <div class="advantage__text">
+                        <div class="advantage__title">Отечественный производитель</div>
+                        <div class="advantage__subtitle">Автокресла производят в г. Георгиевске (Ставропольский край),
+                        соответсвуют нормам ГИБДД и разрешены к использованию по всей территории РФ, о чем говорит сертификат соответствия.</div>
+                    </div>
+                    <div class="advantage__img">
+                        <img src="./assets/images/advantages_3.png" alt="Отечественный производитель">
+                        <span class="advantage__img-shadow"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="discount">
+            <div class="discount__container container">
+                <div class="discount__cost">
+                    <div class="cost">
+                        <div class="cost__before">2545 р.</div>
+                        <div class="cost__after">1850 р.</div>
+                    </div>
+                </div>
+                <div class="discount__arrow">
+                    <img src="./assets/images/arrows/arrow.png" alt="стречка налево">
+                </div>
+                <div class="discount__desc">
+                    <div class="discount__desc-text">
+                        <h2 class="discount__title">Скидка 28%</h2>
+                        <div class="discount__subtitle">и бесплатная доставка
+                            <div class="discount__icon-gift">
+                                <img src="./assets/images/icon_gift.png" alt="Подарок"> в подарок
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discount__form form">
+                        <div class="form__text">
+                            <p>Акция только до:</p>
+                            <div class="form__date">
+                                <img src="./assets/images/icon-date.png" class="form__icon" alt="Дата">
+                                <span class="form__number">4</span>
+                            </div>
+                            <p>декабря</p>
+                        </div>
+                        <!--сомнительный вариант с присвоением одного класса в разные части страницы. Как минунм нарушается методо
+                        логия. Хотя, мы же не верстаем, а программируем при помощи доп класса-->
+                        <button class="btn btn--blue btn--shadow order-call">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="stats">
+            <div class="stats__container container">
+                <div class="stats__item stats-box">
+                    <div class="stats-box__number">8</div>
+                    <div class="stats-box__text">лет на рынке</div>
+                </div>
+                <div class="stats__item stats-box">
+                    <div class="stats-box__number">21 645</div>
+                    <div class="stats-box__text">кресел продано</div>
+                </div>
+                <div class="stats__item stats-box">
+                    <div class="stats-box__number">1 254</div>
+                    <div class="stats-box__text">Заказчика</div>
+                </div>
+                <div class="stats__item stats-box">
+                    <div class="stats-box__number">45</div>
+                    <div class="stats-box__text">заказов в день</div>
+                </div>
+            </div>
+        </div>
+        <div class="certification">
+            <div class="certification__container container">
+                <h2 class="certification__header">Сертификация товара</h2>
+                <div class="certification__main">
+                    <div class="certification__img">
+                        <a href="assets/images/certificate-bg.jpg" target="_blank">
+                            <img src="assets/images/certificate-sm.png" alt="Сертификат">
+                        </a>
+                    </div>
+                    <div class="certification__desc">
+                        <div class="certification__subtitle">
+                            <div class="certification__img-exclamation">
+                                <img src="./assets/images/icon_warning.png" alt="Восклицательный знак!">
+                            </div>
+                            <h3 class="certification__text-header">Соответствуют всем нормам
+                                и требованиям правил ГИБДД</h3>
+                        </div>
+                        <p class="certification__text">Наши кресла производятся в г. Георгиевске (Ставропольский край),
+                            сертифицированны и разрешены к использованию по всей России.
+                        </p>
+                        <p class="certification__text">Кресло весит всего 700 грамм, его можно носить
+                            с собой и установить в любое авто.
+                        </p>
+                        <p class="certification__text">Стирать кресло можно при температуре 30 градусов.</p>
+                    </div>
+                </div>
+                <a href="assets/images/certificate-bg.jpg" target="_blank" class="certification__show-document hidden">Посмотреть сертификат</a>
+            </div>
+        </div>
+        <div class="descriptions">
+            <div class="descriptions__container container">
+                <div class="descriptions__items descriptions__items--reverse">
+                    <div class="desc-item">
+                        <h2 class="desc-item__header">Крепкие ремни</h2>
+                        <div class="desc-item__text">Тесьма ременная имеет плотную структуру и выдерживает большие нагрузки.
+                        </div>
+                    </div>
+                    <div class="desc-item">
+                        <h2 class="desc-item__header">Удобная установка</h2>
+                        <div class="desc-item__text">Достаточно продеть штатный ремень безопасности автомобиля,
+                        через специальный карман устройства "ВИННИ" и застегнуть в замок.
+                        </div>
+                    </div>
+                </div>
+                <div class="descriptions__img">
+                    <img src="./assets/images/arrows/arrow_left_top.png" alt="Стрелка" class="descriptions__arrow descriptions__arrow--left-top">
+                    <img src="./assets/images/arrows/arrow_right_top.png" alt="Стрелка" class="descriptions__arrow descriptions__arrow--right-top">
+                    <img src="./assets/images/arrows/arrow_left_bottom.png" alt="Стрелка" class="descriptions__arrow descriptions__arrow--left-bottom">
+                    <img src="./assets/images/arrows/arrow_right_bottom.png" alt="Стрелка" class="descriptions__arrow descriptions__arrow--right-bottom">
+                </div>
+                <div class="descriptions__items">
+                    <div class="desc-item">
+                        <h2 class="desc-item__header">Безопасные материалы</h2>
+                        <div class="desc-item__text">При пошиве используется ткань "Оксфорд", сетка Air-mesh 3-х слойная,
+                        поролон, спанбонд, халлофайбер. Все материалы экологически чистые, сертифицированы.
+                        </div>
+                    </div>
+                    <div class="desc-item">
+                        <h2 class="desc-item__header">Прочные крепления</h2>
+                        <div class="desc-item__text">Устройство  ВИННИ" имеет пятиточечную систему крепления.
+                        Пряжки производят из высокопрочных пластиков, имеющих хорошие показатели упругости.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="free-delivery">
+            <div class="free-delivery__container container">
+                <div class="free-delivery__main">
+                    <div class="cost free-delivery__cost">
+                        <div class="cost__header cost__header-free-delivery">Скидка 28%</div>
+                        <div class="cost__before cost__before-free-delivery">2545 р.</div>
+                        <div class="cost__after cost__after-free-delivery">1850 р.</div>
+                    </div>
+                </div>
+                <div class="free-delivery__form form">
+                    <div class="form__header">
+                        <div class="form__title form__title--black">Оставьте заявку сейчас и получите</div>
+                        <div class="form__subtitle form__subtitle-delivery">бесплатную доставку!</div>
+                    </div>
+                    <div class="form__inner">
+                        <div class="form__group">
+                            <label for="free-delivery_phone" class="hidden">Ваше телефон</label>
+                            <input class="form__control" type="tel" name="phone" id="free-delivery_phone" placeholder="Ваш телефон">
+                            <button class="btn btn--blue btn--uptext btn--shadow btn--shadow-light order-completed">Перезвоните мне</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="free-delivery__img">
+                    <img src="./assets/images/arrows/delivery-arrow.png" alt="Стрелка">
+                </div>
+            </div>
+        </div>
+        <div class="comparison">
+            <div class="comparison__container container">
+                <div class="comparison__header">
+                    <h2 class="comparison__header-item comparison__header-item--left">Обычное кресло  </h2>
+                    <h2 class="comparison__header-item comparison__header-item--right">Бескаркасное кресло</h2>
+                </div>
+                <div class="comparison__main">
+                    <div class="comparison__text comparison__text--reverse">
+                        <div class="comparison__text-item comparison__text-item--br-right">боковые стенки преграда для движений ребенка, особенно в
+                            зимний период, когда много одежды</div>
+                        <div class="comparison__text-item comparison__text-item--br-right">необходимо менять автокресло по мере увеличения веса ребенка</div>
+                        <div class="comparison__text-item comparison__text-item--br-right">имеет 5-ти точечную фиксацию ребенка</div>
+                        <div class="comparison__text-item comparison__text-item--br-right">нужно убирать в багажник, при перевозки взрослых или каких либо грузов</div>
+                    </div>
+                    <div class="comparison__img">
+                        <div class="comparison__img--left">
+                            <img src="./assets/images/arrows/arrow_compar_left_1.png" alt="Стрелка" class="comparison__arrow comparison__arrow-lf-1">
+                            <img src="./assets/images/arrows/arrow_compar_left_2.png" alt="Стрелка" class="comparison__arrow comparison__arrow-lf-2">
+                            <img src="./assets/images/arrows/arrow_compar_left_3.png" alt="Стрелка" class="comparison__arrow comparison__arrow-lf-3">
+                            <img src="./assets/images/arrows/arrow_compar_left_4.png" alt="Стрелка" class="comparison__arrow comparison__arrow-lf-4">
+                        </div>
+                        <div class="comparison__img--right">
+                            <img src="./assets/images/arrows/arrow_compar_right_1.png" alt="Стрелка" class="comparison__arrow comparison__arrow-rg-1">
+                            <img src="./assets/images/arrows/arrow_compar_right_2.png" alt="Стрелка" class="comparison__arrow comparison__arrow-rg-2">
+                            <img src="./assets/images/arrows/arrow_compar_right_3.png" alt="Стрелка" class="comparison__arrow comparison__arrow-rg-3">
+                            <img src="./assets/images/arrows/arrow_compar_right_4.png" alt="Стрелка" class="comparison__arrow comparison__arrow-rg-4">
+                        </div>
+                    </div>
+                    <div class="comparison__text comparison__text--blue">
+                        <div class="comparison__text-item">дает полную безопасную свободу ребёнка ОСТАВЛЯЕТ СПИНКУ СИДЕНИЕ ЧИСТЫМ</div>
+                        <div class="comparison__text-item">подходит  1, 2, 3 группе детей (от 9 кг до 36 кг) (от 1 года до 12 лет)</div>
+                        <div class="comparison__text-item">имеет 5-ти точечную фиксацию ребенка</div>
+                        <div class="comparison__text-item">не мешает при перевозке пассажиров или грузов. Весит 700 грамм</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contacts">
+            <div class="contacts__container container">
+                <div class="contacts__map" id="map">
+                </div>
+                <div class="contacts__info">
+                    <div class="contacts__icon">
+                        <img src="./assets/images/icon-location.png" alt="Маркер-стрелка">
+                    </div>
+                    <p>Забрать кресло можно по адресу:</p>
+                    <div class="contacts__address">Челябинск,<br/>
+                        ул. Академика Королева, 38</div>
+                    <p>или используйте</p>
+                    <button class="contacts__btn btn btn--blue btn--uptext btn--shadow order-call">Бесплатная доставка</button>
+                    <!--сомнительный вариант с присвоением одного класса в разные части страницы. Как минунм нарушается методо
+                    логия. Хотя, мы же не верстаем, а программируем при помощи доп класса-->
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer__container container">
+                <div class="footer__logo logo">
+                    <a href="#offer">
+                        <div class="logo__img">
+                            <img src="./assets/images/logo.png" alt="Логотип">
+                        </div>
+                        <div class="logo__text">Крылатко</div>
+                    </a>
+                </div>
+                <a href="privacyPolicy.html"  class="footer__privacy" target="_blank">Политика конфидециальности</a>
+                <div class="footer__requisites">
+                    Инн 999999999
+                    ОГРН 453453453453
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

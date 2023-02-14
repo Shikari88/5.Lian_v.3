@@ -1,0 +1,32 @@
+.btn {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  background: inherit;
+  border: 0;
+  font-size: 2.4rem;
+  vertical-align: middle;
+  line-height: 1;
+  color: inherit;
+  padding: 1.5rem 2.5rem;
+  @media screen and (max-width: 1024px) {
+    font-size: 2rem;
+  }
+  &--transparent {
+    background: rgba(255, 255, 255, 0.3);
+    &:hover{
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+  &--orange {
+    background: @color-orange;
+    &:hover {
+      background: #EC9C23;
+      cursor: pointer;
+    }
+    &:active{
+      .btn-active-white;
+    }
+  }
+
+}

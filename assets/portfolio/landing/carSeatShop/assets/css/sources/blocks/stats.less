@@ -1,0 +1,23 @@
+.stats {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media screen and (max-width: 576px){
+      flex-direction: column;
+    }
+  }
+  &__item {
+    margin: 5rem 3rem;
+    @media screen and (max-width: 425px) {
+      margin: 3rem;
+      &:first-child {
+        margin-top: 6rem;
+      }
+      &:last-child {
+        margin-bottom: 6rem;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,27 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &__img {
+    width: 7.4rem;
+    margin-left: 1rem;
+    img {
+      width: 100%;
+      border: 0;// for IE10
+    }
+  }
+  &__text {
+    text-transform: uppercase;
+    font-size: 2.254rem;
+    font-weight: 600;
+    color: @color-blue;
+    position: absolute;
+    top: 5rem;
+    text-shadow: 2px 0 2px #fff,
+    0 2px 2px #fff,
+    -2px 0 2px #fff,
+    0 -2px 2px #fff;
+  }
+}
