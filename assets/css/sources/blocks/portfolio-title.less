@@ -1,17 +1,38 @@
 .portfolio-title {
-    background:url("./../images/bg/bg-folio.png") center/cover;
+    background:url("./../images/bg/bg-portfolio1.jpg") no-repeat;
+    background-size: cover;
+    background-position-y: -6rem;
+}
 
 
+@media screen and (max-width: 1024px){
+    .portfolio-title {
+        background-position-y: 0;
+    }
+}
+@media screen and (max-width: 820px){
+    .portfolio-title {
+        background-position-x: -24rem;
+    }
 }
 
 @media screen and (max-width: 768px){
     .portfolio-title {
-        background-position-x: 78%;
+        background-position: -29rem 1rem;
     }
 }
-
-@media screen and (max-width: 375px){
+@media screen and (max-width: 425px) {
     .portfolio-title {
-        background-position-x: 70%;
+        background-position-x: -56rem;
+    }
+}
+@media screen and (max-width: 393px) {
+    .portfolio-title {
+        background-position-x: -64rem;
+    }
+}
+@media screen and (max-width: 360px) {
+    .portfolio-title {
+        background-position-x: -53rem;
     }
 }
