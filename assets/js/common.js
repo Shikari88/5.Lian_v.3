@@ -16,7 +16,7 @@ $(function () {
         $('.product-cards__nav-item, .product-cards__inner').removeClass('active');
         $(href).addClass('active');
         $(this).addClass('active');
-        $('html, body').animate({scrollTop:645},1000);
+        $('html, body').animate({scrollTop:590},1000);
         $('.product-cards__list--hide').hide();
     });
 
