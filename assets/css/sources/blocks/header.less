@@ -187,7 +187,7 @@
   .header {
     &__icon {
       height: 2.1rem;
-      top: 2rem;
+      top: 1.8rem;
     }
 
   }
@@ -195,7 +195,7 @@
 @media screen and(max-width: 390px) {
   .header {
     &__icon {
-      height: 1.8rem;
+      //height: 1.8rem;
 
     }
     &__nav {
@@ -205,17 +205,21 @@
 }
 @media screen and(max-width: 375px) {
   .header {
-    &__nav {
-      //top: 7.6rem;
-    }
     &__icon {
       height: 2.2rem;
-
-
+    }
+    &__nav {
+      top: 7.6rem;
     }
   }
 }
-
+@media screen and(max-width: 360px) {
+  .header {
+    //&__nav {
+    //  top: 7.6rem;
+    //}
+  }
+}
 @media screen and(max-width: 320px) {
   .header {
     &__nav {
