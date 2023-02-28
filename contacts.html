@@ -58,18 +58,21 @@
     <div class="contacts">
         <div class="contacts__container container">
             <div class="contacts__info">
-                <div class="contacts__title">Office Info</div>
-                <div class="contacts__subtitle">People Behind the Success of our Company</div>
+                <div class="contacts__title">Мы здесь</div>
+                <div class="contacts__subtitle">Доступность наше кредо</div>
                 <span class="contacts__decor-line"></span>
-                <div class="contacts__hours"><span class="contacts__info--bold">Office Hours:</span>  Mon-Friday 8am - 10pm</div>
-                <div class="contacts__address"><span class="contacts__info--bold">Address:</span> Igbalangao, Bugasong, Antique</div>
-                <div class="contacts__phone"><span class="contacts__info--bold">Tell:</span>  123-456-7890</div>
-                <div class="contacts__fax"><span class="contacts__info--bold">Fax:</span>  123-456-7890</div>
+                <div class="contacts__hours"><span class="contacts__info--bold">Работаем:</span>  Пн - Пт 11:00 - 16:00</div>
+                <div class="contacts__address"><span class="contacts__info--bold">Адрес:</span> Санкт-Петербург, Россия</div>
+                <div class="contacts__phone"><span class="contacts__info--bold">Телефон:</span>  123-456-7890</div>
+                <div class="contacts__fax"><span class="contacts__info--bold">Telegram:</span>  123-456-7890</div>
             </div>
-            <form action="" class="contacts__form form">
+
+
+            <form action="" class="contacts__form form" id="contactsForm">
+                <!--<h2>{{ titleConfirm }}</h2>-->
                 <div class="form__group">
                     <label for="name" class="hidden">You're name</label>
-                    <input type="text" class="form__control form__control--md" id="name" placeholder="Name">
+                    <input type="text" class="form__control form__control--md" id="name" placeholder="Имя">
                 </div>
                 <div class="form__group">
                     <label for="email" class="hidden">email</label>
@@ -77,12 +80,14 @@
                 </div>
                 <div class="form__group">
                     <label for="message" class="hidden">Message</label>
-                    <textarea id="message" class="form__control form__control--lg" placeholder="Message"></textarea>
+                    <textarea id="message" class="form__control form__control--lg" placeholder="Сообщение"></textarea>
                 </div>
                 <div class="contacts__btn">
-                    <button class="btn btn--black">send message</button>
+                    <button class="btn btn--black" @click = "alert()">отправить</button>
                 </div>
             </form>
+
+
         </div>
     </div>
     <div class="map"></div>
@@ -150,5 +155,6 @@
         </div>
     </footer>
     <script src="./assets/js/menuBurger.js"></script>
+    <!--<script src="./assets/js/contactsForm.js"></script>-->
 </body>
 </html>
