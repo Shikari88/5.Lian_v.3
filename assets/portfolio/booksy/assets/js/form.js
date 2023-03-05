@@ -1,5 +1,5 @@
 "use strict";
-window.onload = function () {
+window.addEventListener("load",function () {
 
     //----показавыем окно подскажки при клике на иконку подсказки
     let helpIcon = document.querySelectorAll('.form__icon');
@@ -59,7 +59,18 @@ window.onload = function () {
             }
         });
     }
+
+
     //-------------------------------------------------------------------------------
+
+
+    //----------------- Отменяем перезагрузку формы при клике на кнопку -------------
+
+    const form = document.querySelector("#form");
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+    })
+
 
     //----Если в предыдущем пункте вы выбрали ТОЛЬКО БЕСПЛАТНО, то выбирайте здесь ТОЛЬКО БЕСПЛАТНО.
 
@@ -126,4 +137,4 @@ window.onload = function () {
     //
     //     })
     // }
-};
+});

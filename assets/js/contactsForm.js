@@ -1,16 +1,8 @@
+"use strict";
+window.addEventListener("load", function(){
+    const contactsForm = document.querySelector("#contactsForm");
 
-
-//добавляем сообщение при успешной отправки форымы контактов
-// window.onload = function(){
-//     const contactsForm = new contactsForm({
-//         el: "#contactsForm",
-//         data: {
-//           titleConfirm: "Соощение успешно отправлено."
-//         },
-//         method: {
-//             showConf: function () {
-//                 this.alert("Соощение успешно отправлено.");
-//             }
-//         }
-//     })
-// };
+    contactsForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+    })
+});
